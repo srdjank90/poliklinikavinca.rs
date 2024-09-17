@@ -12,24 +12,6 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link  {{ Str::contains(Route::currentRouteName(), 'backend.products') ? 'active' : '' }}"
-                        aria-current="page" href="{{ route('backend.products.index') }}">
-                        <span><i class="bi bi-cart2"></i> {{ __('Products') }} </span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link  {{ Str::contains(Route::currentRouteName(), 'backend.packages') ? 'active' : '' }}"
-                        aria-current="page" href="{{ route('backend.packages.index') }}">
-                        <span><i class="bi bi-box-seam"></i> {{ __('Packages') }} </span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link  {{ Str::contains(Route::currentRouteName(), 'backend.orders') ? 'active' : '' }}"
-                        aria-current="page" href="{{ route('backend.orders.index') }}">
-                        <span><i class="bi bi-card-checklist"></i> {{ __('Orders') }} </span>
-                    </a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link {{ Str::contains(Route::currentRouteName(), 'backend.pages') ? 'active' : '' }}"
                         aria-current="page" href="{{ route('backend.pages.index') }}">
                         <span><i class="bi bi-file-earmark-richtext"></i> {{ __('Pages') }} </span>

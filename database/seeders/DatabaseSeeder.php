@@ -27,11 +27,7 @@ class DatabaseSeeder extends Seeder
             RoleSeeder::class,
             UserSeeder::class,
             PostCategorySeeder::class,
-            ProductCategorySeeder::class,
             OptionSeeder::class,
-            UserAddressSeeder::class,
-            ShippingSeeder::class,
-            ProductFieldSeeder::class
         ]);
     }
 }

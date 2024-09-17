@@ -9,12 +9,4 @@
     <a href="{{ route('backend.settings.seo') }}" type="button"
         class="btn {{ Str::contains(Route::currentRouteName(), 'settings.seo') ? 'btn-primary' : '' }}"><i
             class="bi bi-graph-up-arrow"></i> Seo</a>
-    <a href="{{ route('backend.settings.shippings.index') }}"
-        class="btn {{ Str::contains(Route::currentRouteName(), 'settings.shippings') ? 'btn-primary' : '' }}"><i
-            class="bi bi-truck"></i>
-        Shippings</a>
-    <a href="{{ route('backend.settings.payment-methods.index') }}"
-        class="btn {{ Str::contains(Route::currentRouteName(), 'settings.payment-methods') ? 'btn-primary' : '' }}"><i
-            class="bi bi-credit-card"></i>
-        Payment Methods</a>
 </div>
