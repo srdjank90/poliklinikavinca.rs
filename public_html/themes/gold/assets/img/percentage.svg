@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #726d80;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <g id="Group_6310" data-name="Group 6310">
+    <g id="Group_6291" data-name="Group 6291">
+      <g id="Group_6290" data-name="Group 6290">
+        <path id="Path_1747" data-name="Path 1747" class="cls-1" d="m95,96.86V29.28c0-4.86-3.94-8.8-8.8-8.8h-52.4c-4.86,0-8.8,3.94-8.8,8.8v66.76c0,1.26,1.03,2.29,2.29,2.29.37,0,.73-.09,1.06-.26l13.09-6.85c.67-.35,1.46-.35,2.13,0l15.38,8.05c.66.35,1.46.35,2.12,0l15.37-8.05c.66-.35,1.46-.35,2.12,0l13.08,6.85c1.12.59,2.5.15,3.09-.97.17-.33.26-.69.26-1.06v.83Z"/>
+        <line id="Line_286" data-name="Line 286" class="cls-1" x1="40.74" y1="75.29" x2="80.23" y2="35.81"/>
+        <path id="Path_1748" data-name="Path 1748" class="cls-1" d="m47.69,35.88c3.69,0,6.68,2.99,6.68,6.68,0,3.69-2.99,6.68-6.68,6.68-3.68,0-6.67-2.98-6.68-6.67,0-3.69,2.98-6.68,6.67-6.69,0,0,0,0,.01,0Z"/>
+        <path id="Path_1749" data-name="Path 1749" class="cls-1" d="m72.91,63.39c3.69,0,6.68,2.99,6.68,6.68s-2.99,6.68-6.68,6.68-6.68-2.99-6.68-6.68h0c0-3.69,2.99-6.68,6.68-6.68Z"/>
+      </g>
+    </g>
+  </g>
+</svg>
