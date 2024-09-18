@@ -23,6 +23,18 @@
                         <span><i class="bi bi-newspaper"></i> {{ __('Posts') }} </span>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ Str::contains(Route::currentRouteName(), 'backend.posts') ? 'active' : '' }}"
+                        aria-current="page" href="{{ route('backend.posts.index') }}">
+                        <span><i class="fa-solid fa-suitcase-medical"></i> {{ __('Services') }} </span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ Str::contains(Route::currentRouteName(), 'backend.posts') ? 'active' : '' }}"
+                        aria-current="page" href="{{ route('backend.posts.index') }}">
+                        <span><i class="fa-solid fa-user-doctor"></i> {{ __('Doctors') }} </span>
+                    </a>
+                </li>
 
             </ul>
 
