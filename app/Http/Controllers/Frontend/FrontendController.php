@@ -32,7 +32,8 @@ class FrontendController extends Controller
 
     public function index()
     {
-        return view('frontend.themes.' . $this->theme . '.index', compact());
+        $variable = 'test';
+        return view('frontend.themes.' . $this->theme . '.index', compact('variable'));
     }
 
     public function page($slug)

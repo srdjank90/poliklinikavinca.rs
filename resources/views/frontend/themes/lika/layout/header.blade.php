@@ -28,53 +28,19 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link {{ Route::currentRouteName() == 'frontend.products' ? 'active' : '' }}"
-                            href="{{ route('frontend.products') }}">Products</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link {{ Route::currentRouteName() == 'frontend.cart' ? 'active' : '' }}"
-                            href="{{ route('frontend.cart') }}">Cart</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link {{ Route::currentRouteName() == 'frontend.checkout' ? 'active' : '' }}"
-                            href="{{ route('frontend.checkout') }}">Checkout</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <!-- Search -->
-                        <button class="btn btn-ghost-secondary btn-sm btn-icon d-none" type="button"
-                            data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarSearch"
-                            aria-controls="offcanvasNavbarSearch">
-                            <i class="bi-search"></i>
-                        </button>
-                        <!-- End Search -->
-
-                        <!-- Shopping Cart -->
-                        <button type="button" class="btn btn-ghost-secondary btn-sm btn-icon cart-number-container"
-                            type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarEmptyShoppingCart"
-                            aria-controls="offcanvasNavbarEmptyShoppingCart">
-
-                        </button>
-                        <!-- End Shopping Cart -->
+                        <a class="nav-link {{ Route::currentRouteName() == 'frontend.blog' ? 'active' : '' }}"
+                            href="{{ route('frontend.index') }}">Blog</a>
                     </li>
 
                     @if (!Auth::check())
-                        <li class="nav-item">
-
-                            <a class="" href="{{ route('login') }}"> <i class="bi bi-door-open"></i>
-                                {{ __('Login') }}</a>
-                        </li>
-                        <li class="nav-item d-none">
-                            <a class="" href="{{ route('register') }}"><i class="bi bi-pencil"></i>
-                                {{ __('Register') }}</a>
-                        </li>
-                    @else
-                        <li class="nav-item">
-                            <a class="" href="{{ route('frontend.profile.index') }}"><i class="bi bi-person"></i>
-                                {{ __('My Profile') }}</a>
-                        </li>
+                    <li class="nav-item">
+                        <a class="" href="{{ route('login') }}"> <i class="bi bi-door-open"></i>
+                            {{ __('Login') }}</a>
+                    </li>
+                    <li class="nav-item d-none">
+                        <a class="" href="{{ route('register') }}"><i class="bi bi-pencil"></i>
+                            {{ __('Register') }}</a>
+                    </li>
                     @endif
 
                 </ul>
