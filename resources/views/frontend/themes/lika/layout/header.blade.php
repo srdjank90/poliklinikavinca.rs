@@ -26,7 +26,7 @@
                         <a class="nav-link {{ Route::currentRouteName() == 'frontend.index' ? 'active' : '' }}"
                             href="{{ route('frontend.index') }}">Home</a>
                     </li>
-
+                    <!-- Blog -->
                     <li class="nav-item">
                         <a class="nav-link {{ Route::currentRouteName() == 'frontend.blog' ? 'active' : '' }}"
                             href="{{ route('frontend.index') }}">Blog</a>
