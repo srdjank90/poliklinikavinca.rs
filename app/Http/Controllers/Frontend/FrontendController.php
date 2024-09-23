@@ -3,23 +3,11 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
-use App\Http\Resources\ProductResource;
 use App\Models\Faq;
-use App\Models\GoldPackage;
 use App\Models\Page;
-use App\Models\PaymentMethod;
 use App\Models\Post;
 use App\Models\PostCategory;
 use App\Models\Product;
-use App\Models\ProductAction;
-use App\Models\ProductCategory;
-use App\Models\ProductField;
-use App\Models\Shipping;
-use App\Models\User;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Http;
-use Illuminate\Support\Facades\Log;
 
 class FrontendController extends Controller
 {

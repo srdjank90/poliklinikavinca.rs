@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('services', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('title');
+            $table->text('description');
+            $table->string('appointment')->nullable();
+            $table->longText('content');
+            $table->foreignId('image_id')->nullable();
+            $table->enum('status', ['draft', 'published', 'auto-draft', 'trashed', 'future']);
             $table->timestamps();
         });
     }
