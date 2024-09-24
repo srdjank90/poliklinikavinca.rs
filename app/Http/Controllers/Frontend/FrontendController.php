@@ -8,6 +8,7 @@ use App\Models\Page;
 use App\Models\Post;
 use App\Models\PostCategory;
 use App\Models\Product;
+use App\Models\Service;
 
 class FrontendController extends Controller
 {
@@ -58,13 +59,22 @@ class FrontendController extends Controller
     public function post($slug)
     {
         $post = Post::where('slug', $slug)->first();
-        $randomProduct = Product::where('price_avans', '<', 200000)->inRandomOrder()->first();
         // Handle 404
         if (!$post) {
             return view('frontend.themes.' . $this->theme . '.404', []);
         }
 
-        return view('frontend.themes.' . $this->theme . '.post', compact('post', 'randomProduct'));
+        return view('frontend.themes.' . $this->theme . '.post', compact('post'));
+    }
+
+    public function service($slug)
+    {
+        $service = Service::where('slug', $slug)->first();
+        if (!$service) {
+            return view('frontend.themes.' . $this->theme . '.404', []);
+        }
+
+        return view('frontend.themes.' . $this->theme . '.service', compact('service'));
     }
 
     public function contact()

@@ -24,8 +24,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Str::contains(Route::currentRouteName(), 'backend.posts') ? 'active' : '' }}"
-                        aria-current="page" href="{{ route('backend.posts.index') }}">
+                    <a class="nav-link {{ Str::contains(Route::currentRouteName(), 'backend.services') ? 'active' : '' }}"
+                        aria-current="page" href="{{ route('backend.services.index') }}">
                         <span><i class="fa-solid fa-suitcase-medical"></i> {{ __('Services') }} </span>
                     </a>
                 </li>

@@ -3,25 +3,36 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
-use App\Models\File;
-use App\Models\Product;
-use App\Models\ProductAction;
+use App\Models\Service;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+use App\Models\File;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Str;
 
-class ProductActionController extends BackendController
+class ServiceController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $productActions = ProductAction::all();
-        $products = Product::where('status', 'published')->get(['id', 'name']);
-        return view('backend.products.actions.index', compact('productActions', 'products'));
+        // Items per page
+        $perPage = getOption('service_per_page_opt', 8);
+        $search = '';
+        if ($request->search && $request->search !== '') {
+            $search = $request->search;
+        }
+        if ($search !== '') {
+            $services = Service::where('title', 'LIKE', '%' . $search . '%')
+                ->orWhere('name', 'LIKE', '%' . $search . '%')
+                ->orderBy('created_at', 'desc')
+                ->paginate($perPage);
+        } else {
+            $services = Service::orderBy('created_at', 'desc')->paginate($perPage);
+        }
+        return view('backend.services.index', compact(['services', 'search']));
     }
 
     /**
@@ -29,7 +40,7 @@ class ProductActionController extends BackendController
      */
     public function create()
     {
-        //
+        return view('backend.services.create');
     }
 
     /**
@@ -37,13 +48,12 @@ class ProductActionController extends BackendController
      */
     public function store(Request $request)
     {
-        $productAction = new ProductAction($request->except(['products', 'action_image']));
-        $productAction->products = json_encode($request->products);
-        $productAction->slug = Str::of($productAction->name)->slug('-');
+        Log::info($request->all());
+        $service = new Service($request->all());
+        $service->slug = Str::slug($service->name, '-');
 
-
-        if ($request->action_image) {
-            $imageFile = $request->file('action_image');
+        if ($request->service_image) {
+            $imageFile = $request->file('service_image');
             $extension  = $imageFile->getClientOriginalExtension();
             $originalName = $imageFile->getClientOriginalName();
             $mimeType = $imageFile->getMimeType();
@@ -64,12 +74,13 @@ class ProductActionController extends BackendController
                 "user_id" => Auth::id()
             ];
             $uploadedImage = File::create($imageData)->id;
-            $productAction->image_id = $uploadedImage;
+            $service->image_id = $uploadedImage;
         }
 
 
-        $productAction->save();
-        return redirect()->route('backend.products.actions.index');
+        $service->save();
+        $id = $service->id;
+        return response()->json(['success' => true, 'error' => null, 'id' => $id, 'url' => route('backend.services.edit', $id)]);
     }
 
     /**
@@ -85,7 +96,8 @@ class ProductActionController extends BackendController
      */
     public function edit(string $id)
     {
-        //
+        $service = Service::findOrFail($id);
+        return view('backend.services.edit', compact(['service']));
     }
 
     /**
@@ -94,14 +106,15 @@ class ProductActionController extends BackendController
     public function update(Request $request, string $id)
     {
         $request->validate([
-            'name' => 'required',
+            'title' => 'required',
             'slug' => 'required'
         ]);
 
-        $productAction = ProductAction::find($id);
+        $service = Service::find($id);
+        $service->update($request->except(['service_image']));
 
-        if ($request->action_image) {
-            $imageFile = $request->file('action_image');
+        if ($request->service_image) {
+            $imageFile = $request->file('service_image');
             $extension  = $imageFile->getClientOriginalExtension();
             $originalName = $imageFile->getClientOriginalName();
             $mimeType = $imageFile->getMimeType();
@@ -122,13 +135,12 @@ class ProductActionController extends BackendController
                 "user_id" => Auth::id()
             ];
             $uploadedImage = File::create($imageData)->id;
-            $productAction->image_id = $uploadedImage;
+            $service->image_id = $uploadedImage;
         }
 
-        $productAction->products = json_encode($request->products);
-        $productAction->update($request->except(['products', 'action_image']));
+        $service->save();
 
-        return redirect()->route('backend.products.actions.index')
+        return redirect()->route('backend.services.edit', [$id])
             ->with('success', 'Updated successfully');
     }
 
@@ -137,16 +149,18 @@ class ProductActionController extends BackendController
      */
     public function destroy(string $id)
     {
-        $productAction = ProductAction::find($id);
-        $productAction->delete();
+        $service = Service::find($id);
+        $service->delete();
         return response()->json(['type' => 'success', 'message' => 'Deleted!'], 200);
     }
 
-    public function regenerateOriginalName($imagePath, $originalName, $extension)
+    /**
+     * Settings for Posts
+     */
+    public function settings()
     {
-        $newOriginalName = '';
-        $totalFilesSameName = File::where('path', $imagePath . "/" . $originalName)->count();
-        $newOriginalName = str_replace("." . $extension, "-" . $totalFilesSameName . "." . $extension, $originalName);
-        return $newOriginalName;
+        $services = Service::all();
+        $options = getOptions('service_');
+        return view('backend.services.settings', compact(['services', 'options']));
     }
 }

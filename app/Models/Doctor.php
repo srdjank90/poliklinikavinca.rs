@@ -8,4 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class Doctor extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['name', 'slug', 'area', 'image_id', 'content', 'education', 'experience', 'email', 'phone'];
+
+    public function image()
+    {
+        return $this->belongsTo(File::class, 'image_id', 'id');
+    }
+
+    public function seo()
+    {
+        return $this->hasOne(SeoMetaTag::class, 'model_id')->where('model', 'Doctor');
+    }
 }

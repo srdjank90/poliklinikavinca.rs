@@ -41,6 +41,14 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::post('/backend/posts/categories/store', [App\Http\Controllers\Backend\PostCategoryController::class, 'store'])->name('backend.posts.categories.store');
     Route::delete('/backend/posts/categories/delete/{id}', [App\Http\Controllers\Backend\PostCategoryController::class, 'destroy'])->name('backend.pages.categories.delete');
 
+    // Backend Services
+    Route::get('/backend/services', [App\Http\Controllers\Backend\ServiceController::class, 'index'])->name('backend.services.index');
+    Route::post('/backend/services/store', [App\Http\Controllers\Backend\ServiceController::class, 'store'])->name('backend.services.store');
+    Route::get('/backend/services/edit/{id}', [App\Http\Controllers\Backend\ServiceController::class, 'edit'])->name('backend.services.edit');
+    Route::put('/backend/services/update/{id}', [App\Http\Controllers\Backend\ServiceController::class, 'update'])->name('backend.services.update');
+    Route::delete('/backend/services/delete/{id}', [App\Http\Controllers\Backend\ServiceController::class, 'destroy'])->name('backend.services.delete');
+    Route::get('/backend/services/settings', [App\Http\Controllers\Backend\ServiceController::class, 'settings'])->name('backend.services.settings');
+
     // Backend Files
     Route::get('/backend/files', [App\Http\Controllers\Backend\FileController::class, 'index'])->name('backend.files.index');
     #Route::get('/backend/orders/edit/{id}', [App\Http\Controllers\Backend\OrderController::class, 'edit'])->name('backend.orders.edit');
@@ -73,6 +81,7 @@ Route::get('/blog', [App\Http\Controllers\Frontend\FrontendController::class, 'p
 Route::get('/about', [App\Http\Controllers\Frontend\FrontendController::class, 'about'])->name('frontend.about');
 Route::get('/faqs', [App\Http\Controllers\Frontend\FrontendController::class, 'faqs'])->name('frontend.faqs');
 Route::get('/kontakt', [App\Http\Controllers\Frontend\FrontendController::class, 'contact'])->name('frontend.contact');
+Route::get('/servisi/{slug}', [App\Http\Controllers\Frontend\FrontendController::class, 'service'])->name('frontend.service');
 Route::get('/{slug}', [App\Http\Controllers\Frontend\FrontendController::class, 'page'])->name('frontend.page');
 
 Route::post('/subscribe', [App\Http\Controllers\Frontend\SubscribeController::class, 'subscribe'])->name('frontend.subscribe');
