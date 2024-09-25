@@ -17,11 +17,11 @@ return new class extends Migration
             $table->string('slug');
             $table->string('area')->nullable();
             $table->foreignId('image_id')->nullable();
-            $table->longText('content');
-            $table->longText('education');
-            $table->longText('experience');
-            $table->string('email');
-            $table->string('phone');
+            $table->longText('content')->nullable();
+            $table->longText('education')->nullable();
+            $table->longText('experience')->nullable();
+            $table->string('email')->nullable();
+            $table->string('phone')->nullable();
             $table->timestamps();
         });
     }

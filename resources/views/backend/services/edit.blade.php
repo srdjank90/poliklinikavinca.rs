@@ -19,6 +19,9 @@
                     {{ __('Back') }}</a>
             </div>
             <div class="sk-page-actions-right">
+                <a href="{{ route('backend.services.faqs.index', $service->id) }}" class="btn btn-secondary me-3">
+                    <i class="bi bi-item"></i> {{ __('Service Faqs') }}
+                </a>
                 <a href="{{ route('backend.services.items.index', $service->id) }}" class="btn btn-secondary me-3">
                     <i class="bi bi-item"></i> {{ __('Service Items') }}
                 </a>

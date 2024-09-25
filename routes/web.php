@@ -56,6 +56,13 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::put('/backend/services/{serviceId}/items/update/{id}', [App\Http\Controllers\Backend\ServiceItemController::class, 'update'])->name('backend.services.items.update');
     Route::delete('/backend/services/{serviceId}/items/delete/{id}', [App\Http\Controllers\Backend\ServiceItemController::class, 'destroy'])->name('backend.services.items.delete');
 
+    // Backend Service Faqs
+    Route::get('/backend/services/{serviceId}/faqs', [App\Http\Controllers\Backend\ServiceFaqController::class, 'index'])->name('backend.services.faqs.index');
+    Route::post('/backend/services/{serviceId}/faqs/store', [App\Http\Controllers\Backend\ServiceFaqController::class, 'store'])->name('backend.services.faqs.store');
+    Route::get('/backend/services/{serviceId}/faqs/edit/{id}', [App\Http\Controllers\Backend\ServiceFaqController::class, 'edit'])->name('backend.services.faqs.edit');
+    Route::put('/backend/services/{serviceId}/faqs/update/{id}', [App\Http\Controllers\Backend\ServiceFaqController::class, 'update'])->name('backend.services.faqs.update');
+    Route::delete('/backend/services/{serviceId}/faqs/delete/{id}', [App\Http\Controllers\Backend\ServiceFaqController::class, 'destroy'])->name('backend.services.faqs.delete');
+
     // Backend Doctors
     Route::get('/backend/doctors', [App\Http\Controllers\Backend\DoctorController::class, 'index'])->name('backend.doctors.index');
     Route::post('/backend/doctors/store', [App\Http\Controllers\Backend\DoctorController::class, 'store'])->name('backend.doctors.store');
