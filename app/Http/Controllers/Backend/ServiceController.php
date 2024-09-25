@@ -48,7 +48,6 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
-        Log::info($request->all());
         $service = new Service($request->all());
         $service->slug = Str::slug($service->name, '-');
 

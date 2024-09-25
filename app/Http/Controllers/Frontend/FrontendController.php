@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Doctor;
 use App\Models\Faq;
 use App\Models\Page;
 use App\Models\Post;
@@ -75,6 +76,16 @@ class FrontendController extends Controller
         }
 
         return view('frontend.themes.' . $this->theme . '.service', compact('service'));
+    }
+
+    public function doctor($slug)
+    {
+        $doctor = Doctor::where('slug', $slug)->first();
+        if (!$doctor) {
+            return view('frontend.themes.' . $this->theme . '.404', []);
+        }
+
+        return view('frontend.themes.' . $this->theme . '.doctor', compact('doctor'));
     }
 
     public function contact()

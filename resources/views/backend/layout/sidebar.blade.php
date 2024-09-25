@@ -30,8 +30,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Str::contains(Route::currentRouteName(), 'backend.posts') ? 'active' : '' }}"
-                        aria-current="page" href="{{ route('backend.posts.index') }}">
+                    <a class="nav-link {{ Str::contains(Route::currentRouteName(), 'backend.doctors') ? 'active' : '' }}"
+                        aria-current="page" href="{{ route('backend.doctors.index') }}">
                         <span><i class="fa-solid fa-user-doctor"></i> {{ __('Doctors') }} </span>
                     </a>
                 </li>

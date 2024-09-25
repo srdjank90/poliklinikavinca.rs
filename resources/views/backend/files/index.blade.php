@@ -25,7 +25,7 @@
                     {{ __('Upload Files') }}</a>
             </div>
             <div class="sk-page-actions-right">
-                <a class="btn btn-secondary" href="{{ route('backend.orders.settings') }}"><i class="bi bi-gear"></i></a>
+                <a class="btn btn-secondary" href="#"><i class="bi bi-gear"></i></a>
             </div>
         </div>
         <div class="col-md-12">
