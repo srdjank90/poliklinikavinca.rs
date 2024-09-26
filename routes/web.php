@@ -103,8 +103,10 @@ Route::get('/blog', [App\Http\Controllers\Frontend\FrontendController::class, 'p
 Route::get('/about', [App\Http\Controllers\Frontend\FrontendController::class, 'about'])->name('frontend.about');
 Route::get('/faqs', [App\Http\Controllers\Frontend\FrontendController::class, 'faqs'])->name('frontend.faqs');
 Route::get('/kontakt', [App\Http\Controllers\Frontend\FrontendController::class, 'contact'])->name('frontend.contact');
-Route::get('/servisi/{slug}', [App\Http\Controllers\Frontend\FrontendController::class, 'service'])->name('frontend.service');
-Route::get('/doktori/{slug}', [App\Http\Controllers\Frontend\FrontendController::class, 'doctor'])->name('frontend.doctor');
+Route::get('/usluge', [App\Http\Controllers\Frontend\FrontendController::class, 'services'])->name('frontend.services');
+Route::get('/usluga/{slug}', [App\Http\Controllers\Frontend\FrontendController::class, 'service'])->name('frontend.service');
+Route::get('/doktori', [App\Http\Controllers\Frontend\FrontendController::class, 'doctors'])->name('frontend.doctors');
+Route::get('/doktor/{slug}', [App\Http\Controllers\Frontend\FrontendController::class, 'doctor'])->name('frontend.doctor');
 
 Route::get('/{slug}', [App\Http\Controllers\Frontend\FrontendController::class, 'page'])->name('frontend.page');
 

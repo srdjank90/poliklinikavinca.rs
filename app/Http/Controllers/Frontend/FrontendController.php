@@ -10,6 +10,7 @@ use App\Models\Post;
 use App\Models\PostCategory;
 use App\Models\Product;
 use App\Models\Service;
+use Illuminate\Support\Facades\Log;
 
 class FrontendController extends Controller
 {
@@ -23,7 +24,9 @@ class FrontendController extends Controller
     public function index()
     {
         $variable = 'test';
-        return view('frontend.themes.' . $this->theme . '.index', compact('variable'));
+        $popularServices = Service::orderBy('created_at', 'asc')->limit(4)->get();
+        $latestPosts = Post::where('status', 'published')->orderBy('created_at', 'asc')->limit(3)->get();
+        return view('frontend.themes.' . $this->theme . '.index', compact('variable', 'popularServices', 'latestPosts'));
     }
 
     public function page($slug)
@@ -76,6 +79,18 @@ class FrontendController extends Controller
         }
 
         return view('frontend.themes.' . $this->theme . '.service', compact('service'));
+    }
+
+    public function services()
+    {
+        $services = Service::paginate(16);
+        return view('frontend.themes.' . $this->theme . '.services', compact('services'));
+    }
+
+    public function doctors()
+    {
+        $doctors = Doctor::paginate(16);
+        return view('frontend.themes.' . $this->theme . '.doctors', compact('doctors'));
     }
 
     public function doctor($slug)

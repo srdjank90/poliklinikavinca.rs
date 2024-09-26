@@ -6,6 +6,7 @@ use App\Models\Post;
 use App\Models\Product;
 use App\Models\ProductAction;
 use App\Models\ProductCategory;
+use App\Models\Service;
 use Carbon\Carbon;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Blade;
@@ -36,6 +37,7 @@ class AppServiceProvider extends ServiceProvider
         Schema::defaultStringLength(191);
         Paginator::useBootstrap();
         if (!$this->app->runningInConsole()) {
+            $globalServices = Service::all();
             $settings = getOptions('setting');
             $menuPosts = Post::where('menu_display', 1)->where('status', 'published')->orderBy('created_at', 'desc')->get();
             $footerPosts = Post::where('footer_display', 1)->where('status', 'published')->orderBy('created_at', 'desc')->get()->take(3);
@@ -43,6 +45,7 @@ class AppServiceProvider extends ServiceProvider
             View::share('setting', $settings);
             View::share('menuPosts', $menuPosts);
             View::share('footerPosts', $footerPosts);
+            View::share('globalServices', $globalServices);
         }
 
         // Parse Date
