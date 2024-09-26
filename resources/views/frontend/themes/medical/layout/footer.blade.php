@@ -30,7 +30,7 @@
         <div class="container px-5 py-5">
             <div class="row">
                 <div class="col-12 col-lg-4 col-md-6">
-                    <a href="index.php"
+                    <a href="{{ route('frontend.index') }}"
                         class="brand d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none">
                         <img src="/themes/medical/assets/img/logo.png" class="img-fluid"
                             alt="Poliklinika Vinča - logotip" />

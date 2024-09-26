@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary py-0 osahan-nav">
     <div class="container px-5">
-        <a class="navbar-brand" href="index.php"><img class="img-fluid" src="/themes/medical/assets/img/logo.png"
-                alt="Poliklinika Vinča - logotip" /></a>
+        <a class="navbar-brand" href="{{ route('frontend.index') }}"><img class="img-fluid"
+                src="/themes/medical/assets/img/logo.png" alt="Poliklinika Vinča - logotip" /></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
                 class="navbar-toggler-icon"></span></button>

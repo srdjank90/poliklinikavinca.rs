@@ -71,6 +71,13 @@ class FrontendController extends Controller
         return view('frontend.themes.' . $this->theme . '.post', compact('post'));
     }
 
+    public function services()
+    {
+        $services = Service::paginate(16);
+        $latestPosts = Post::where('status', 'published')->orderBy('created_at', 'asc')->limit(3)->get();
+        return view('frontend.themes.' . $this->theme . '.services', compact('services', 'latestPosts'));
+    }
+
     public function service($slug)
     {
         $service = Service::where('slug', $slug)->first();
@@ -81,11 +88,7 @@ class FrontendController extends Controller
         return view('frontend.themes.' . $this->theme . '.service', compact('service'));
     }
 
-    public function services()
-    {
-        $services = Service::paginate(16);
-        return view('frontend.themes.' . $this->theme . '.services', compact('services'));
-    }
+
 
     public function doctors()
     {
