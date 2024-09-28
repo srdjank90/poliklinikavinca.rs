@@ -75,17 +75,20 @@ class FrontendController extends Controller
     {
         $services = Service::paginate(16);
         $latestPosts = Post::where('status', 'published')->orderBy('created_at', 'asc')->limit(3)->get();
+
         return view('frontend.themes.' . $this->theme . '.services', compact('services', 'latestPosts'));
     }
 
     public function service($slug)
     {
-        $service = Service::where('slug', $slug)->first();
+        $service = Service::with(['items', 'faqs'])->where('slug', $slug)->first();
+        $randomServices = Service::inRandomOrder()->take(3)->get();
+        $latestPosts = Post::where('status', 'published')->orderBy('created_at', 'asc')->limit(3)->get();
         if (!$service) {
             return view('frontend.themes.' . $this->theme . '.404', []);
         }
 
-        return view('frontend.themes.' . $this->theme . '.service', compact('service'));
+        return view('frontend.themes.' . $this->theme . '.service', compact('service', 'randomServices', 'latestPosts'));
     }
 
 

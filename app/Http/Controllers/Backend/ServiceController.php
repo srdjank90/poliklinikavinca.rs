@@ -162,4 +162,12 @@ class ServiceController extends Controller
         $options = getOptions('service_');
         return view('backend.services.settings', compact(['services', 'options']));
     }
+
+    public function regenerateOriginalName($imagePath, $originalName, $extension)
+    {
+        $newOriginalName = '';
+        $totalFilesSameName = File::where('path', $imagePath . "/" . $originalName)->count();
+        $newOriginalName = str_replace("." . $extension, "-" . $totalFilesSameName . "." . $extension, $originalName);
+        return $newOriginalName;
+    }
 }

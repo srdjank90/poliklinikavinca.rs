@@ -11,6 +11,16 @@ class Service extends Model
 
     protected $fillable = ['name', 'slug', 'title', 'description', 'appointment', 'content', 'image_id', 'discount'];
 
+    public function items()
+    {
+        return $this->hasMany(ServiceItem::class);
+    }
+
+    public function faqs()
+    {
+        return $this->hasMany(ServiceFaq::class);
+    }
+
     public function image()
     {
         return $this->belongsTo(File::class, 'image_id', 'id');
