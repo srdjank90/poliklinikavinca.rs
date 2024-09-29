@@ -55,7 +55,7 @@
             <p class="mb-5 fs-5">U par klikova zakažite Vaš pregled ili nas pozovite tokom radnog vremena na <a
                     href="tel:+381605558888"><b>(060) 555 88 88</b></a></p>
             <a class="btn btn-outline-dark fw-bold fs-7 rounded-3 px-4 py-3 text-uppercase"
-                href="{{ route('frontend.index') }}">Zakažite
+                href="{{ route('frontend.appointment') }}">Zakažite
                 pregled</a>
         </div>
     </section>
@@ -177,7 +177,7 @@
                 <div class="ms-xl-4">
                     <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
                         <a class="btn btn-light fw-bold text-primary fs-7 rounded-3 px-4 py-3 text-uppercase me-sm-1"
-                            href="{{ route('frontend.index') }}"> Zakažite pregled </a>
+                            href="{{ route('frontend.appointment') }}"> Zakažite pregled </a>
                         <a class="btn btn-outline-light fw-bold fs-7 rounded-3 px-4 py-3 text-uppercase"
                             href="tel:+381605558888"> <i class="bi bi-telephone"></i> 060 555 88 88 </a>
                     </div>

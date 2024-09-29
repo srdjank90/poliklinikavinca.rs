@@ -8,9 +8,7 @@ use App\Models\Faq;
 use App\Models\Page;
 use App\Models\Post;
 use App\Models\PostCategory;
-use App\Models\Product;
 use App\Models\Service;
-use Illuminate\Support\Facades\Log;
 
 class FrontendController extends Controller
 {
@@ -63,12 +61,13 @@ class FrontendController extends Controller
     public function post($slug)
     {
         $post = Post::where('slug', $slug)->first();
+        $latestPosts = Post::where('status', 'published')->orderBy('created_at', 'asc')->limit(3)->get();
         // Handle 404
         if (!$post) {
             return view('frontend.themes.' . $this->theme . '.404', []);
         }
 
-        return view('frontend.themes.' . $this->theme . '.post', compact('post'));
+        return view('frontend.themes.' . $this->theme . '.post', compact('post', 'latestPosts'));
     }
 
     public function services()
@@ -91,22 +90,22 @@ class FrontendController extends Controller
         return view('frontend.themes.' . $this->theme . '.service', compact('service', 'randomServices', 'latestPosts'));
     }
 
-
-
     public function doctors()
     {
-        $doctors = Doctor::paginate(16);
-        return view('frontend.themes.' . $this->theme . '.doctors', compact('doctors'));
+        $doctors = Doctor::paginate(25);
+        $latestPosts = Post::where('status', 'published')->orderBy('created_at', 'asc')->limit(3)->get();
+        return view('frontend.themes.' . $this->theme . '.doctors', compact('doctors', 'latestPosts'));
     }
 
     public function doctor($slug)
     {
         $doctor = Doctor::where('slug', $slug)->first();
+        $latestPosts = Post::where('status', 'published')->orderBy('created_at', 'asc')->limit(3)->get();
         if (!$doctor) {
             return view('frontend.themes.' . $this->theme . '.404', []);
         }
 
-        return view('frontend.themes.' . $this->theme . '.doctor', compact('doctor'));
+        return view('frontend.themes.' . $this->theme . '.doctor', compact('doctor', 'latestPosts'));
     }
 
     public function contact()
@@ -114,9 +113,23 @@ class FrontendController extends Controller
         return view('frontend.themes.' . $this->theme . '.contact');
     }
 
+    public function pricing()
+    {
+        $services = Service::with(['items', 'faqs'])->get();
+        $randomServices = Service::inRandomOrder()->take(3)->get();
+        $latestPosts = Post::where('status', 'published')->orderBy('created_at', 'asc')->limit(3)->get();
+        return view('frontend.themes.' . $this->theme . '.pricing', compact('latestPosts', 'randomServices', 'services'));
+    }
+
+    public function appointment()
+    {
+        return view('frontend.themes.' . $this->theme . '.appointment');
+    }
+
     public function about()
     {
-        return view('frontend.themes.' . $this->theme . '.about');
+        $latestPosts = Post::where('status', 'published')->orderBy('created_at', 'asc')->limit(3)->get();
+        return view('frontend.themes.' . $this->theme . '.about', compact('latestPosts'));
     }
 
     public function faqs()

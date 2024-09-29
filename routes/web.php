@@ -100,17 +100,21 @@ Route::get('/', [App\Http\Controllers\Frontend\FrontendController::class, 'index
 Route::get('/blog/{categorySlug}', [App\Http\Controllers\Frontend\FrontendController::class, 'categoryPosts'])->name('frontend.category.posts');
 Route::get('/blog/{slug}', [App\Http\Controllers\Frontend\FrontendController::class, 'post'])->name('frontend.post');
 Route::get('/blog', [App\Http\Controllers\Frontend\FrontendController::class, 'posts'])->name('frontend.posts');
-Route::get('/about', [App\Http\Controllers\Frontend\FrontendController::class, 'about'])->name('frontend.about');
-Route::get('/faqs', [App\Http\Controllers\Frontend\FrontendController::class, 'faqs'])->name('frontend.faqs');
+Route::get('/o-nama', [App\Http\Controllers\Frontend\FrontendController::class, 'about'])->name('frontend.about');
+Route::get('/najcesca-pitanja', [App\Http\Controllers\Frontend\FrontendController::class, 'faqs'])->name('frontend.faqs');
 Route::get('/kontakt', [App\Http\Controllers\Frontend\FrontendController::class, 'contact'])->name('frontend.contact');
+Route::get('/cenovnik', [App\Http\Controllers\Frontend\FrontendController::class, 'pricing'])->name('frontend.pricing');
+Route::get('/zakazi-pregled', [App\Http\Controllers\Frontend\FrontendController::class, 'appointment'])->name('frontend.appointment');
 Route::get('/usluge', [App\Http\Controllers\Frontend\FrontendController::class, 'services'])->name('frontend.services');
 Route::get('/usluga/{slug}', [App\Http\Controllers\Frontend\FrontendController::class, 'service'])->name('frontend.service');
 Route::get('/doktori', [App\Http\Controllers\Frontend\FrontendController::class, 'doctors'])->name('frontend.doctors');
 Route::get('/doktor/{slug}', [App\Http\Controllers\Frontend\FrontendController::class, 'doctor'])->name('frontend.doctor');
 
+
 Route::get('/{slug}', [App\Http\Controllers\Frontend\FrontendController::class, 'page'])->name('frontend.page');
 
 Route::post('/subscribe', [App\Http\Controllers\Frontend\SubscribeController::class, 'subscribe'])->name('frontend.subscribe');
 Route::post('/contact-send', [App\Http\Controllers\Frontend\ContactController::class, 'sendContactForm'])->name('frontend.contact.send');
+Route::post('/appointment-send', [App\Http\Controllers\Frontend\AppointmentController::class, 'sendAppointmentForm'])->name('frontend.appointment.send');
 
 Route::get('/generate/sitemap', [App\Http\Controllers\Frontend\GenerateController::class, 'sitemap'])->name('generate.sitemap');

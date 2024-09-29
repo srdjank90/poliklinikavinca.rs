@@ -39,7 +39,8 @@
                     <div class="d-flex gap-3 mb-3 py-1">
                         <i class="bi bi-chat-dots text-white h5 m-0"></i>
                         <div>
-                            <p class="mb-1 fw-bold text-white"><a href="appointment.php">Zakažite Vaš pregled</a></p>
+                            <p class="mb-1 fw-bold text-white"><a href="{{ route('frontend.appointment') }}">Zakažite
+                                    Vaš pregled</a></p>
                             <small class="text-muted">U par klikova zakažite Vaš pregled.</small>
                         </div>
                     </div>
@@ -62,29 +63,36 @@
                 </div>
                 <div class="col-12 col-lg-2 col-md-6">
                     <h6 class="mb-3 text-white fw-bold">INFORMACIJE</h6>
-                    <a class="py-1 text-decoration-none d-block w-100 text-muted" href="about.php">O nama</a>
-                    <a class="py-1 text-decoration-none d-block w-100 text-muted" href="blog-home.php">Saveti
+                    <a class="py-1 text-decoration-none d-block w-100 text-muted" href="{{ route('frontend.about') }}">O
+                        nama</a>
+                    <a class="py-1 text-decoration-none d-block w-100 text-muted"
+                        href="{{ route('frontend.posts') }}">Saveti
                         stručnjaka</a>
                     <a class="py-1 text-decoration-none d-block w-100 text-muted"
-                        href="services-overview.php">Usluge</a>
-                    <a class="py-1 text-decoration-none d-block w-100 text-muted" href="doctors-overview.php">Lekari</a>
-                    <a class="py-1 text-decoration-none d-block w-100 text-muted" href="appointment.php">Zakazivanje</a>
-                    <a class="py-1 text-decoration-none d-block w-100 text-muted" href="pricing.php">Cenovnik</a>
+                        href="{{ route('frontend.services') }}">Usluge</a>
+                    <a class="py-1 text-decoration-none d-block w-100 text-muted"
+                        href="{{ route('frontend.doctors') }}">Lekari</a>
+                    <a class="py-1 text-decoration-none d-block w-100 text-muted"
+                        href="{{ route('frontend.appointment') }}">Zakazivanje</a>
+                    <a class="py-1 text-decoration-none d-block w-100 text-muted"
+                        href="{{ route('frontend.pricing') }}">Cenovnik</a>
                 </div>
                 <div class="col-12 col-lg-2 col-md-6">
                     <h6 class="mb-3 text-white fw-bold">PONUDA</h6>
                     <a class="py-1 text-decoration-none d-block w-100 text-muted"
-                        href="services-item.php">Ginekologija</a>
+                        href="{{ route('frontend.service', 'ginekologija') }}">Ginekologija</a>
                     <a class="py-1 text-decoration-none d-block w-100 text-muted"
-                        href="services-item.php">Radiologija</a>
+                        href="{{ route('frontend.service', 'radiologija') }}">Radiologija</a>
                     <a class="py-1 text-decoration-none d-block w-100 text-muted"
-                        href="services-item.php">Neurologija</a>
+                        href="{{ route('frontend.service', 'neurologija') }}">Neurologija</a>
                     <a class="py-1 text-decoration-none d-block w-100 text-muted"
-                        href="services-item.php">Kardiologija</a>
-                    <a class="py-1 text-decoration-none d-block w-100 text-muted" href="services-item.php">Ultrazvuk</a>
+                        href="{{ route('frontend.service', 'kardiologija') }}">Kardiologija</a>
                     <a class="py-1 text-decoration-none d-block w-100 text-muted"
-                        href="services-item.php">Laboratorija</a>
-                    <a class="py-1 text-decoration-none d-block w-100 text-muted" href="services-overview.php"><b>Sve
+                        href="{{ route('frontend.service', 'ultrazvuk') }}">Ultrazvuk</a>
+                    <a class="py-1 text-decoration-none d-block w-100 text-muted"
+                        href="{{ route('frontend.service', 'laboratorija') }}">Laboratorija</a>
+                    <a class="py-1 text-decoration-none d-block w-100 text-muted"
+                        href="{{ route('frontend.services') }}"><b>Sve
                             usluge</b></a>
                 </div>
                 <div class="col-12 col-lg-4 col-md-6">

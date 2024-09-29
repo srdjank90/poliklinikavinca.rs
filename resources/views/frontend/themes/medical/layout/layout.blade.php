@@ -18,6 +18,9 @@
         integrity='sha512-ywmPbuxGS4cJ7GxwCX+bCJweeext047ZYU2HP52WWKbpJnF4/Zzfr2Bo19J4CWPXZmleVusQ9d//RB5bq0RP7w=='
         crossorigin='anonymous' />
     <!-- Core theme CSS (includes Bootstrap)-->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css'
+        integrity='sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=='
+        crossorigin='anonymous' />
     <link href="/themes/medical/assets/css/styles.css" rel="stylesheet" />
     <meta name="robots" content="noindex, nofollow">
 </head>

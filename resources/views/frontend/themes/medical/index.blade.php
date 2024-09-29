@@ -14,9 +14,9 @@
                                 posto popusta i u oktobru.</p>
                             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
                                 <a class="btn btn-light fw-bold text-primary fs-7 rounded-3 px-4 py-3 text-uppercase me-sm-1"
-                                    href="{{ route('frontend.contact') }}"> Pogledajte cenovnik </a>
+                                    href="{{ route('frontend.pricing') }}"> Pogledajte cenovnik </a>
                                 <a class="btn btn-outline-light fw-bold fs-7 rounded-3 px-4 py-3 text-uppercase"
-                                    href="{{ route('frontend.contact') }}"> Zakažite pregled </a>
+                                    href="{{ route('frontend.appointment') }}"> Zakažite pregled </a>
                             </div>
                         </div>
                     </div>

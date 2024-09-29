@@ -160,4 +160,12 @@ class DoctorController extends Controller
         $options = getOptions('doctor_');
         return view('backend.doctors.settings', compact(['doctors', 'options']));
     }
+
+    public function regenerateOriginalName($imagePath, $originalName, $extension)
+    {
+        $newOriginalName = '';
+        $totalFilesSameName = File::where('path', $imagePath . "/" . $originalName)->count();
+        $newOriginalName = str_replace("." . $extension, "-" . $totalFilesSameName . "." . $extension, $originalName);
+        return $newOriginalName;
+    }
 }

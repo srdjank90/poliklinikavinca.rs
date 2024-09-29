@@ -2,57 +2,102 @@
 @section('content')
     <div class="bg-primary">
         <header class="bg-primary py-5 inner-header">
-            <div class="container py-5 px-5">
+            <div class="container py-4 px-5">
+                <div class="row gx-5 align-items-center justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="text-center">
+                            <h1 class="fw-bold text-white">Kompletan cenovnik usluga</h1>
+                            <p class="lead fw-normal text-white-50 mb-0">Kompletna zdravstvena usluga na jednom mestu, sa 20
+                                posto popusta i u oktobru</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </header>
     </div>
-    <!-- Page Content-->
-    <section class="pb-5 mt-n5">
-        <div class="container px-5 mb-5">
+    <section class="py-5">
+        <div class="container px-5 my-5">
             <div class="row gx-5">
-                <div class="col-lg-9 mx-auto">
-                    <div class="bg-white shadow-sm p-5 rounded-3">
-                        <h1 class="fw-bold text-black mb-3">
-                            {{ $post->title }}
-                        </h1>
-                        <p class="fs-5 fw-light text-dark-50 mb-4">
-                            Excerpt
-                        </p>
+                <div class="col-xl-8">
+                    <!-- Service Prices -->
+                    @foreach ($services as $service)
+                        <div class="accordion mb-2" id="accordionExample">
+                            <div class="accordion-item border-0 shadow-sm mb-2 rounded-3 overflow-hidden">
+                                <h3 class="accordion-header" id="heading-{{ $service->id }}"><button
+                                        class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapse-{{ $service->id }}" aria-expanded="false"
+                                        aria-controls="collapse-{{ $service->id }}">{{ $service->name }}
+                                        cenovnik</button></h3>
+                                <div class="accordion-collapse collapse" id="collapse-{{ $service->id }}"
+                                    aria-labelledby="heading-{{ $service->id }}" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        @foreach ($service->items as $item)
+                                            <div class="p-2 d-flex justify-content-between align-items-center">
+                                                <span><i class="bi bi-check text-primary"></i>
+                                                    {{ $item->name }}</span>
 
-                        <!-- Post content-->
-                        <div>
-                            <!-- Preview image figure-->
-                            <figure class="mb-4">
-                                @if ($post->image)
-                                    <img class="img-fluid rounded w-100" src="{{ $storageUrl }}{{ $post->image->path }}"
-                                        alt="{{ $post->title }}">
-                                @endif
-                            </figure>
-                            <!-- Post content-->
-                            <section>
-                                {!! $post->content !!}
-                                <div class="border-top text-center pt-5">
-                                    <a class="btn btn-outline-primary" href="{{ route('frontend.posts') }}">
-                                        Nazad na sve novosti
-                                    </a>
+                                                @if ($item->price && $item->price != '')
+                                                    <span class="fw-bold">{{ $item->price }} RSD</span>
+                                                @endif
+                                            </div>
+                                        @endforeach
+                                    </div>
                                 </div>
-                            </section>
+                            </div>
                         </div>
+                    @endforeach
+
+                </div>
+                <div class="col-xl-4">
+                    <div class="sidebar-fixed">
+                        @foreach ($randomServices as $service)
+                            <div class="card border-0 bg-white shadow-sm mt-xl-3">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <div class="position-relative">
+                                            <div class="bg-white shadow-sm overflow-hidden rounded-3">
+                                                @if ($service->image)
+                                                    <img class="card-img-top"
+                                                        src="{{ $storageUrl }}{{ $service->image->path }}"
+                                                        alt="{{ $service->name }}">
+                                                @endif
+                                                <div class="p-4">
+                                                    <div class="mb-3">
+                                                        <h5 class="fw-bold mb-1">{{ $service->name }}</h5>
+                                                        <p class="fw-light mb-0 text-primary small">
+                                                            Dijagnostika, prevencija i lečenje ženskog
+                                                            reproduktivnog sistema
+                                                        </p>
+                                                    </div>
+                                                    <p class="text-muted fw-light mb-0">
+                                                        {{ $service->title }}
+                                                    </p> <br><a href="{{ route('frontend.service', $service->slug) }}"
+                                                        class="btn btn-warning text-uppercase fw-bold">Saznajte više</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Appointment Section -->
     <section class="py-5 bg-warning">
         <div class="container px-5 my-5 text-center">
             <h2 class="display-5 fw-bolder text-black mb-1">Zakažite Vaš pregled</h2>
             <p class="mb-5 fs-5">U par klikova zakažite Vaš pregled ili nas pozovite tokom radnog vremena na <a
                     href="tel:+381605558888"><b>(060) 555 88 88</b></a></p>
             <a class="btn btn-outline-dark fw-bold fs-7 rounded-3 px-4 py-3 text-uppercase"
-                href="{{ route('frontend.appointment') }}">Zakažite
-                pregled</a>
+                href="{{ route('frontend.appointment') }}">Zakažite pregled</a>
         </div>
     </section>
+
     <!-- Testimonial section-->
     <section class="py-5 bg-white">
         <div class="container px-5 mt-5">
@@ -115,7 +160,8 @@
             </div>
         </div>
     </section>
-    <!-- Latest Posts Section -->
+
+    <!-- Latest Posts Section-->
     <section class="py-5">
         <div class="container px-5 mt-5">
             <div class="row gx-5 justify-content-center">
@@ -130,7 +176,6 @@
             </div>
             <div class="row gx-5">
                 @foreach ($latestPosts as $lPost)
-                    <!-- Post Items -->
                     <div class="col-lg-4 mb-5">
                         <div class="card h-100 shadow-sm rounded-3 border-0">
                             @if ($lPost->image)
@@ -159,6 +204,8 @@
             </div>
         </div>
     </section>
+
+    <!-- Appointment Section -->
     <section class="py-5 bg-primary">
         <div class="container px-5 my-4">
             <div
@@ -179,7 +226,4 @@
             </div>
         </div>
     </section>
-
-
-    </html>
 @endsection

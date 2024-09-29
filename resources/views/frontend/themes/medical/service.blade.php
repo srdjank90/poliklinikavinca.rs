@@ -14,7 +14,7 @@
                                 {{ $service->description }}
                             </p>
                             <a class="btn btn-warning fw-bold fs-7 rounded-3 border-0 px-4 py-3 text-uppercase"
-                                href="{{ route('frontend.contact') }}">Zakažite Vaš pregled!</a>
+                                href="{{ route('frontend.appointment') }}">Zakažite Vaš pregled!</a>
                         </div>
                     </div>
                 </div>
@@ -57,10 +57,12 @@
             <p class="mb-5 fs-5">U par klikova zakažite Vaš pregled ili nas pozovite tokom radnog vremena na <a
                     href="tel:+381605558888"><b>(060) 555 88 88</b></a></p>
             <a class="btn btn-outline-dark fw-bold fs-7 rounded-3 px-4 py-3 text-uppercase"
-                href="{{ route('frontend.contact') }}">Zakažite
+                href="{{ route('frontend.appointment') }}">Zakažite
                 pregled</a>
         </div>
     </section>
+
+    <!-- Service Items,Faqs and Random Services -->
     <section class="py-5">
         <div class="container px-5 my-5">
             <div class="row gx-5">
@@ -151,6 +153,7 @@
             </div>
         </div>
     </section>
+
     <!-- Doctors Section -->
     <section class="py-5">
         <div class="container px-5 mt-5">
@@ -170,6 +173,7 @@
             </div>
         </div>
     </section>
+
     <!-- Testimonial section-->
     <section class="py-5 bg-white">
         <div class="container px-5 mt-5">
@@ -232,7 +236,8 @@
             </div>
         </div>
     </section>
-    <!-- Blog preview section-->
+
+    <!-- Latest Posts Section-->
     <section class="py-5">
         <div class="container px-5 mt-5">
             <div class="row gx-5 justify-content-center">
@@ -275,6 +280,8 @@
             </div>
         </div>
     </section>
+
+    <!-- Appointment Section -->
     <section class="py-5 bg-primary">
         <div class="container px-5 my-4">
             <!-- Call to action-->
@@ -288,7 +295,7 @@
                 <div class="ms-xl-4">
                     <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
                         <a class="btn btn-light fw-bold text-primary fs-7 rounded-3 px-4 py-3 text-uppercase me-sm-1"
-                            href="appointment.php"> Zakažite pregled </a>
+                            href=""> Zakažite pregled </a>
                         <a class="btn btn-outline-light fw-bold fs-7 rounded-3 px-4 py-3 text-uppercase"
                             href="tel:+381605558888"> <i class="bi bi-telephone"></i> 060 555 88 88 </a>
                     </div>

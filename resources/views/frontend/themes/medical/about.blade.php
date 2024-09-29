@@ -3,41 +3,92 @@
     <div class="bg-primary">
         <header class="bg-primary py-5 inner-header">
             <div class="container py-5 px-5">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-lg-8 col-xxl-7">
+                        <div class="text-center">
+                            <h1 class="fw-bold text-white mb-3">Kratka priča o<br> poliklinici budućnosti!</h1>
+                            <p class="lead fw-normal text-white-50 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
+                                suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </header>
     </div>
-    <!-- Page Content-->
-    <section class="pb-5 mt-n5">
-        <div class="container px-5 mb-5">
-            <div class="row gx-5">
-                <div class="col-lg-9 mx-auto">
-                    <div class="bg-white shadow-sm p-5 rounded-3">
-                        <h1 class="fw-bold text-black mb-3">
-                            {{ $post->title }}
-                        </h1>
-                        <p class="fs-5 fw-light text-dark-50 mb-4">
-                            Excerpt
-                        </p>
-
-                        <!-- Post content-->
-                        <div>
-                            <!-- Preview image figure-->
-                            <figure class="mb-4">
-                                @if ($post->image)
-                                    <img class="img-fluid rounded w-100" src="{{ $storageUrl }}{{ $post->image->path }}"
-                                        alt="{{ $post->title }}">
-                                @endif
-                            </figure>
-                            <!-- Post content-->
-                            <section>
-                                {!! $post->content !!}
-                                <div class="border-top text-center pt-5">
-                                    <a class="btn btn-outline-primary" href="{{ route('frontend.posts') }}">
-                                        Nazad na sve novosti
-                                    </a>
-                                </div>
-                            </section>
-                        </div>
+    <!-- About section one-->
+    <section class="py-5" id="scroll-target">
+        <div class="container px-5 my-5">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-6"><img class="img-fluid rounded mb-5 mb-lg-0" src="/themes/medical/assets/img/about.jpg"
+                        alt="..." />
+                </div>
+                <div class="col-lg-6 ps-lg-5">
+                    <p class="text-uppercase text-primary mb-2">Brief History</p>
+                    <h2 class="h1 fw-bold mb-3 text-black">Get to know us more</h2>
+                    <p class="lead">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                        mollit anim id est laborum.</p>
+                    <p class="fs-6 fw-light text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                        est, ut esse a labore aliquam beatae expedita. Blanditiis impedit numquam libero molestiae et fugit
+                        cupiditate, quibusdam expedita, maiores eaque quisquam.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About section two-->
+    <section class="py-5 bg-white">
+        <div class="container px-5 my-5">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-6 order-first order-lg-last"><img class="img-fluid rounded mb-5 mb-lg-0"
+                        src="/themes/medical/assets/img/about2.jpg" alt="..." /></div>
+                <div class="col-lg-6 pe-lg-5">
+                    <p class="text-uppercase text-primary mb-2">Our Mission & Vision</p>
+                    <h2 class="h1 fw-bold mb-3 text-black">Better Information,<br> Better Health</h2>
+                    <p class="fs-6 fw-light text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                        est, ut esse a labore aliquam beatae expedita. Blanditiis impedit numquam libero molestiae et fugit
+                        cupiditate, quibusdam expedita, maiores eaque quisquam.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Team members section-->
+    <section class="py-5">
+        <div class="container px-5 mt-5">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold mb-2 text-black">Our Team</h2>
+                <p class="text-muted">Dedicated to quality and your success</p>
+            </div>
+            <div class="row gx-5 row-cols-1 row-cols-sm-2 row-cols-xl-4 justify-content-center">
+                <div class="col mb-5 mb-5 mb-xl-0">
+                    <div class="text-center">
+                        <img class="img-fluid rounded-circle mb-4 px-4" src="/themes/medical/assets/img/t1.png"
+                            alt="..." />
+                        <h5 class="fw-bolder">Ibbie Eckart</h5>
+                        <div class="fst-italic text-muted">Founder &amp; CEO</div>
+                    </div>
+                </div>
+                <div class="col mb-5 mb-5 mb-xl-0">
+                    <div class="text-center">
+                        <img class="img-fluid rounded-circle mb-4 px-4" src="/themes/medical/assets/img/t2.png"
+                            alt="..." />
+                        <h5 class="fw-bolder">Arden Vasek</h5>
+                        <div class="fst-italic text-muted">CFO</div>
+                    </div>
+                </div>
+                <div class="col mb-5 mb-5 mb-sm-0">
+                    <div class="text-center">
+                        <img class="img-fluid rounded-circle mb-4 px-4" src="/themes/medical/assets/img/t3.png"
+                            alt="..." />
+                        <h5 class="fw-bolder">Toribio Nerthus</h5>
+                        <div class="fst-italic text-muted">Operations Manager</div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="text-center">
+                        <img class="img-fluid rounded-circle mb-4 px-4" src="/themes/medical/assets/img/t4.png"
+                            alt="..." />
+                        <h5 class="fw-bolder">Malvina Cilla</h5>
+                        <div class="fst-italic text-muted">CTO</div>
                     </div>
                 </div>
             </div>
@@ -115,6 +166,8 @@
             </div>
         </div>
     </section>
+
+
     <!-- Latest Posts Section -->
     <section class="py-5">
         <div class="container px-5 mt-5">
@@ -159,8 +212,10 @@
             </div>
         </div>
     </section>
+
     <section class="py-5 bg-primary">
         <div class="container px-5 my-4">
+            <!-- Call to action-->
             <div
                 class="d-flex align-items-center justify-content-between flex-column flex-xl-row text-center text-xl-start">
                 <div class="mb-4 mb-xl-0">
@@ -179,7 +234,4 @@
             </div>
         </div>
     </section>
-
-
-    </html>
 @endsection

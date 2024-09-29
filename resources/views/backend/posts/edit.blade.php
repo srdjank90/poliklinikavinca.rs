@@ -176,7 +176,7 @@
                                 </div>
 
 
-                                <div class="form-group">
+                                <div class="form-group d-none">
                                     <div class="form-check form-switch">
                                         <input class="form-check-input" type="checkbox" role="switch"
                                             name="product_single_display"

@@ -2,47 +2,54 @@
 @section('content')
     <div class="bg-primary">
         <header class="bg-primary py-5 inner-header">
-            <div class="container py-5 px-5">
-            </div>
-        </header>
-    </div>
-    <!-- Page Content-->
-    <section class="pb-5 mt-n5">
-        <div class="container px-5 mb-5">
-            <div class="row gx-5">
-                <div class="col-lg-9 mx-auto">
-                    <div class="bg-white shadow-sm p-5 rounded-3">
-                        <h1 class="fw-bold text-black mb-3">
-                            {{ $post->title }}
-                        </h1>
-                        <p class="fs-5 fw-light text-dark-50 mb-4">
-                            Excerpt
-                        </p>
-
-                        <!-- Post content-->
-                        <div>
-                            <!-- Preview image figure-->
-                            <figure class="mb-4">
-                                @if ($post->image)
-                                    <img class="img-fluid rounded w-100" src="{{ $storageUrl }}{{ $post->image->path }}"
-                                        alt="{{ $post->title }}">
-                                @endif
-                            </figure>
-                            <!-- Post content-->
-                            <section>
-                                {!! $post->content !!}
-                                <div class="border-top text-center pt-5">
-                                    <a class="btn btn-outline-primary" href="{{ route('frontend.posts') }}">
-                                        Nazad na sve novosti
-                                    </a>
-                                </div>
-                            </section>
+            <div class="container py-4 px-5">
+                <div class="row gx-5 align-items-center justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="text-center">
+                            <h1 class="fw-bold text-white">Naši lekari</h1>
+                            <p class="lead fw-normal text-white-50 mb-0">Upoznajte uigran tim Poliklinike Vinča</p>
                         </div>
                     </div>
                 </div>
             </div>
+        </header>
+    </div>
+
+    <!-- Page Content-->
+    <section class="py-5">
+        <div class="container px-5 mt-5">
+            <div class="row gx-5">
+                @foreach ($doctors as $doctor)
+                    <div class="col-lg-4">
+                        <div class="position-relative mb-5">
+                            <div class="bg-white shadow-sm p-4 rounded-3">
+                                <div class="d-flex mb-3 align-items-center">
+                                    @if ($doctor->image)
+                                        <img class="img-fluid rounded-circle" style="width: 150px;height:150px"
+                                            src="{{ $storageUrl }}{{ $doctor->image->path }}" alt="{{ $doctor->name }}">
+                                    @endif
+
+                                    <div class="ms-3">
+                                        <h5 class="fw-bold mb-1">{{ $doctor->name }} <i
+                                                class="bi bi-patch-check-fill small text-primary"></i></h5>
+                                        <p class="fw-light mb-0 text-muted small">{{ $doctor->area }}</p>
+                                    </div>
+                                </div>
+                                <p class="text-muted fw-light mb-4"></p>
+                                <div class="d-flex align-items-center justify-content-end">
+                                    <a href="{{ route('frontend.appointment') }}"
+                                        class="btn btn-outline-primary stretched-link">
+                                        Zakazivanje</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
         </div>
     </section>
+
+    <!-- Appointment -->
     <section class="py-5 bg-warning">
         <div class="container px-5 my-5 text-center">
             <h2 class="display-5 fw-bolder text-black mb-1">Zakažite Vaš pregled</h2>
@@ -53,7 +60,8 @@
                 pregled</a>
         </div>
     </section>
-    <!-- Testimonial section-->
+
+    <!-- Testimonials -->
     <section class="py-5 bg-white">
         <div class="container px-5 mt-5">
             <div class="row gx-5 justify-content-center">
@@ -115,7 +123,8 @@
             </div>
         </div>
     </section>
-    <!-- Latest Posts Section -->
+
+    <!-- Latest Posts -->
     <section class="py-5">
         <div class="container px-5 mt-5">
             <div class="row gx-5 justify-content-center">
@@ -159,6 +168,8 @@
             </div>
         </div>
     </section>
+
+    <!-- Appointment -->
     <section class="py-5 bg-primary">
         <div class="container px-5 my-4">
             <div
@@ -179,7 +190,4 @@
             </div>
         </div>
     </section>
-
-
-    </html>
 @endsection
