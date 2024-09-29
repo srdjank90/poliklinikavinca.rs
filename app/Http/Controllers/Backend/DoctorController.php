@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Models\Doctor;
 use App\Models\File;
+use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
@@ -94,7 +95,8 @@ class DoctorController extends Controller
     public function edit(string $id)
     {
         $doctor = Doctor::findOrFail($id);
-        return view('backend.doctors.edit', compact(['doctor']));
+        $services = Service::all();
+        return view('backend.doctors.edit', compact(['doctor', 'services']));
     }
 
     /**

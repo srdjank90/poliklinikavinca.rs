@@ -155,24 +155,30 @@
     </section>
 
     <!-- Doctors Section -->
-    <section class="py-5">
-        <div class="container px-5 mt-5">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold mb-2 text-black">Tim Doktora</h2>
-                <p class="text-muted"></p>
-            </div>
-            <div class="row gx-5 row-cols-1 row-cols-sm-2 row-cols-xl-4 justify-content-center">
-                <div class="col mb-5 mb-5 mb-xl-0">
-                    <div class="text-center">
-                        <img class="img-fluid rounded-circle mb-4 px-4" src="/themes/medical/assets/img/t1.png"
-                            alt="..." />
-                        <h5 class="fw-bolder">Ibbie Eckart</h5>
-                        <div class="fst-italic text-muted">Founder &amp; CEO</div>
-                    </div>
+    @if (count($doctors) > 0)
+        <section class="py-5">
+            <div class="container px-5 mt-5">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold mb-2 text-black">Tim Doktora</h2>
+                    <p class="text-muted"></p>
+                </div>
+                <div class="row gx-5 row-cols-1 row-cols-sm-2 row-cols-xl-4 justify-content-center">
+                    @foreach ($doctors as $doctor)
+                        <div class="col mb-5 mb-5 mb-xl-0">
+                            <div class="text-center">
+                                @if ($doctor->image)
+                                    <img class="img-fluid rounded-circle" style="height:150px;width:150px"
+                                        src="{{ $storageUrl }}{{ $doctor->image->path }}" alt="{{ $doctor->name }}">
+                                @endif
+                                <h5 class="fw-bolder">{{ $doctor->name }}</h5>
+                                <div class="fst-italic text-muted">{{ $doctor->area }}</div>
+                            </div>
+                        </div>
+                    @endforeach
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    @endif
 
     <!-- Testimonial section-->
     <section class="py-5 bg-white">

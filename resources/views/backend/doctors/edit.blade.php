@@ -133,6 +133,23 @@
                             </div>
                         </div>
 
+                        <!-- Doctor Service -->
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <div class="form-group mb-3">
+                                    <label for="">{{ __('Service') }}</label>
+                                    <select name="service_id" id="serviceId" class="form-select">
+                                        <option value="">Izaberi</option>
+                                        @foreach ($services as $service)
+                                            <option value="{{ $service->id }}"
+                                                {{ $doctor->service_id == $service->id ? 'selected' : '' }}>
+                                                {{ $service->name }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
 
                     </div>
                 </div>

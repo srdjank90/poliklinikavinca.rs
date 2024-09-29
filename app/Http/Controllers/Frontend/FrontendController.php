@@ -83,11 +83,12 @@ class FrontendController extends Controller
         $service = Service::with(['items', 'faqs'])->where('slug', $slug)->first();
         $randomServices = Service::inRandomOrder()->take(3)->get();
         $latestPosts = Post::where('status', 'published')->orderBy('created_at', 'asc')->limit(3)->get();
+        $doctors = Doctor::where('service_id', $service->id)->get();
         if (!$service) {
             return view('frontend.themes.' . $this->theme . '.404', []);
         }
 
-        return view('frontend.themes.' . $this->theme . '.service', compact('service', 'randomServices', 'latestPosts'));
+        return view('frontend.themes.' . $this->theme . '.service', compact('service', 'randomServices', 'latestPosts', 'doctors'));
     }
 
     public function doctors()
