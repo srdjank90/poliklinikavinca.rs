@@ -74,7 +74,6 @@ class FrontendController extends Controller
     {
         $services = Service::paginate(16);
         $latestPosts = Post::where('status', 'published')->orderBy('created_at', 'asc')->limit(3)->get();
-
         return view('frontend.themes.' . $this->theme . '.services', compact('services', 'latestPosts'));
     }
 
@@ -87,7 +86,6 @@ class FrontendController extends Controller
         if (!$service) {
             return view('frontend.themes.' . $this->theme . '.404', []);
         }
-
         return view('frontend.themes.' . $this->theme . '.service', compact('service', 'randomServices', 'latestPosts', 'doctors'));
     }
 
