@@ -79,17 +79,27 @@
                     <div class="accordion mb-5" id="accordionExample">
                         @foreach ($service->items as $item)
                             <div class="accordion-item border-0 shadow-sm mb-2 rounded-3 overflow-hidden">
+                                @php
+                                    $discountedPrice = null;
+                                    if ($item->discount && $item->discount > 0) {
+                                        $discountPercentage = $item->discount; // Discount percentage
+                                        $discountAmount = ($item->price * $discountPercentage) / 100;
+                                        $discountedPrice = $item->price - $discountAmount;
+                                    }
+                                @endphp
                                 <h3 class="accordion-header" id="heading-{{ $item->id }}"><button
-                                        class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapse-{{ $item->id }}" aria-expanded="false"
-                                        aria-controls="collapse-{{ $item->id }}">
+                                        class="accordion-button collapsed prices-button-accordion" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse-{{ $item->id }}"
+                                        aria-expanded="false" aria-controls="collapse-{{ $item->id }}">
                                         {{ $item->name }}
                                         @if ($item->price && $item->price != '')
-                                            (<span class="me-1"> {{ $item->price }}</span> RSD)
+                                            (<span style="text-decoration: line-through" class="me-1">
+                                                {{ $item->price }} RSD</span>
+                                            <span style="font-weight: bold">{{ $discountedPrice }} RSD</span>)
                                         @endif
                                     </button>
                                 </h3>
-                                <div class="accordion-collapse collapse" id="collapse-{{ $item->id }}"
+                                <div class="accordion-collapse collapse d-none" id="collapse-{{ $item->id }}"
                                     aria-labelledby="heading-{{ $item->id }}" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
                                         {{ $item->description }}
@@ -315,4 +325,10 @@
             </div>
         </div>
     </section>
+    <style>
+        .prices-button-accordion::after {
+            width: 0 !important;
+            height: 0 !important;
+        }
+    </style>
 @endsection

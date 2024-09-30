@@ -32,15 +32,40 @@
                                     aria-labelledby="heading-{{ $service->id }}" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
                                         @foreach ($service->items as $item)
+                                            @php
+                                                $discountedPrice = null;
+                                                if ($item->discount && $item->discount > 0) {
+                                                    $discountPercentage = $item->discount; // Discount percentage
+                                                    $discountAmount = ($item->price * $discountPercentage) / 100;
+                                                    $discountedPrice = $item->price - $discountAmount;
+                                                }
+                                            @endphp
                                             <div class="p-2 d-flex justify-content-between align-items-center">
                                                 <span><i class="bi bi-check text-primary"></i>
                                                     {{ $item->name }}</span>
-
                                                 @if ($item->price && $item->price != '')
-                                                    <span class="fw-bold">{{ $item->price }} RSD</span>
+                                                    <div>
+                                                        (<span style="text-decoration: line-through" class="me-1">
+                                                            {{ $item->price }} RSD</span>
+                                                        <span style="font-weight: bold">{{ $discountedPrice }} RSD</span>)
+                                                    </div>
                                                 @endif
                                             </div>
                                         @endforeach
+                                        @if ($service->slug == 'estetska-medicina')
+                                            <div class="text-start">
+                                                <a class="btn btn-primary" target="blank"
+                                                    href="{{ $storageUrl }}estetska-medicina-cenovnik.pdf">Pogledajte
+                                                    cenovnik</a>
+                                            </div>
+                                        @endif
+                                        @if ($service->slug == 'laboratorija')
+                                            <div class="text-start">
+                                                <a class="btn btn-primary" target="blank"
+                                                    href="{{ $storageUrl }}laboratorija-cenovnik.pdf">Pogledajte
+                                                    cenovnik</a>
+                                            </div>
+                                        @endif
                                     </div>
                                 </div>
                             </div>

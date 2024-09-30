@@ -26,12 +26,15 @@
                         <div class="position-relative mb-5">
                             <div class="bg-white shadow-sm overflow-hidden rounded-3">
                                 @if ($service->image)
-                                    <img class="card-img-top" src="{{ $storageUrl }}{{ $service->image->path }}"
-                                        alt="{{ $service->name }}">
+                                    <a class="text-black" href="{{ route('frontend.service', $service->slug) }}"><img
+                                            class="card-img-top" src="{{ $storageUrl }}{{ $service->image->path }}"
+                                            alt="{{ $service->name }}"></a>
                                 @endif
                                 <div class="p-4">
                                     <div class="mb-3">
-                                        <h5 class="fw-bold mb-1">{{ $service->name }}</h5>
+                                        <h5 class="fw-bold mb-1"><a class="text-black"
+                                                href="{{ route('frontend.service', $service->slug) }}">{{ $service->name }}</a>
+                                        </h5>
                                         <p class="fw-light mb-0 text-primary small">
                                             {{ $service->subtitle }}
                                         </p>
