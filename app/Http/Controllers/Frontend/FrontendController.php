@@ -128,7 +128,8 @@ class FrontendController extends Controller
     public function about()
     {
         $latestPosts = Post::where('status', 'published')->orderBy('created_at', 'asc')->limit(3)->get();
-        return view('frontend.themes.' . $this->theme . '.about', compact('latestPosts'));
+        $doctors = Doctor::all();
+        return view('frontend.themes.' . $this->theme . '.about', compact('latestPosts', 'doctors'));
     }
 
     public function faqs()

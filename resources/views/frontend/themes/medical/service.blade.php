@@ -64,6 +64,18 @@
                 <div class="col-xl-8">
                     <!-- Service Items -->
                     <h5 class="fw-bolder mb-4">Pogledajte naš cenovnik i pronađite usluge koje su vam potrebne. 📋</h5>
+                    @if ($service->slug == 'estetska-medicina')
+                        <div class="text-start">
+                            <a class="btn btn-primary" target="blank"
+                                href="{{ $storageUrl }}estetska-medicina-cenovnik.pdf">Pogledajte cenovnik</a>
+                        </div>
+                    @endif
+                    @if ($service->slug == 'laboratorija')
+                        <div class="text-start">
+                            <a class="btn btn-primary" target="blank"
+                                href="{{ $storageUrl }}laboratorija-cenovnik.pdf">Pogledajte cenovnik</a>
+                        </div>
+                    @endif
                     <div class="accordion mb-5" id="accordionExample">
                         @foreach ($service->items as $item)
                             <div class="accordion-item border-0 shadow-sm mb-2 rounded-3 overflow-hidden">
@@ -154,7 +166,7 @@
             <div class="container px-5 mt-5">
                 <div class="text-center mb-5">
                     <h2 class="fw-bold mb-2 text-black">Naši lekari</h2>
-                    <p class="text-muted"></p>
+                    <p class="text-muted">Upoznajte uigran tim Poliklinike Vinča</p>
                 </div>
                 <div class="row gx-5 row-cols-1 row-cols-sm-2 row-cols-xl-4 justify-content-center">
                     @foreach ($doctors as $doctor)

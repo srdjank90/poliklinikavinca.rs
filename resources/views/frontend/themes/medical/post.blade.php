@@ -16,7 +16,7 @@
                             {{ $post->title }}
                         </h1>
                         <p class="fs-5 fw-light text-dark-50 mb-4">
-                            {!! $post->toc !!}
+                            {!! str_replace('h2', 'h6', $post->toc) !!}
                         </p>
                         <!-- Post content-->
                         <div>

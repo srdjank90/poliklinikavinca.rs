@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="">
+<html lang="sr-Latn">
 
 <head>
     <!-- Required Meta Tags Always Come First -->

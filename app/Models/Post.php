@@ -12,7 +12,7 @@ class Post extends Model
     use SoftDeletes;
 
     protected $fillable = ['title', 'slug', 'image_id', 'toc', 'highlighted', 'footer_display', 'menu_display', 'product_single_display', 'content', 'excerpt', 'status', 'user_id', 'expiry_date', 'published_at'];
-
+    protected $appends = ['excerpt'];
     public function categories()
     {
         return $this->belongsToMany(PostCategory::class);
@@ -33,8 +33,19 @@ class Post extends Model
         return $this->hasOne(SeoMetaTag::class, 'model_id')->where('model', 'Post');
     }
 
-    public function getExcerptAttribute($value)
+    public function getExcerptAttribute2()
     {
         return substr(strip_tags($this->content), 0, 215) . '...';
+    }
+
+    public function getExcerptAttribute()
+    {
+        $cleanedContent = strip_tags($this->content);
+        $excerpt = mb_substr($cleanedContent, 0, 215);
+        if (mb_strlen($cleanedContent) > 215) {
+            $excerpt .= '...';
+        }
+
+        return $excerpt;
     }
 }

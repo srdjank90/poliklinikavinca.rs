@@ -7,9 +7,12 @@
                     <div class="col-lg-8 col-xxl-7">
                         <div class="text-center">
                             <h1 class="fw-bold text-white mb-3">Kratka priča o<br> poliklinici budućnosti!</h1>
-                            <p class="lead fw-normal text-white-50 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
-                                suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel.</p>
+                            <p class="lead fw-normal text-white-50 mb-4">Svoju delatnost Poliklinika Vinča by Profesional
+                                Medic – obavlja u savremenom objektu neto površine 1.403 m2 sa 50 parking mesta, koji se
+                                nalazi u glavnoj ulici naselja, u ulici Profesora Vasića br. 24, maltene na Smederevskom
+                                putu, ali će i na poziv stručnjaci Poliklinike pružiti zdravstvenu uslugu i u domu
+                                pacijenta, podržavajući stav naših zdravstvenih vlasti u vraćanju i razvijanju funkcije
+                                porodičnog lekara.</p>
                         </div>
                     </div>
                 </div>
@@ -20,17 +23,18 @@
     <section class="py-5" id="scroll-target">
         <div class="container px-5 my-5">
             <div class="row gx-5 align-items-center">
-                <div class="col-lg-6"><img class="img-fluid rounded mb-5 mb-lg-0" src="/themes/medical/assets/img/about.jpg"
-                        alt="..." />
+                <div class="col-lg-6"><img class="img-fluid rounded mb-5 mb-lg-0"
+                        src="/themes/medical/assets/img/poliklinika-vinca.webp" alt="poliklinika" />
                 </div>
                 <div class="col-lg-6 ps-lg-5">
-                    <p class="text-uppercase text-primary mb-2">Brief History</p>
-                    <h2 class="h1 fw-bold mb-3 text-black">Get to know us more</h2>
-                    <p class="lead">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                        mollit anim id est laborum.</p>
-                    <p class="fs-6 fw-light text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-                        est, ut esse a labore aliquam beatae expedita. Blanditiis impedit numquam libero molestiae et fugit
-                        cupiditate, quibusdam expedita, maiores eaque quisquam.</p>
+                    <p class="text-uppercase text-primary mb-2">Vinča • Prvo neolitsko naselje! Vinča • Prvi nuklearni
+                        institut!</p>
+                    <h2 class="h1 fw-bold mb-3 text-black">Vinča • Prva POLIKLINIKA u ovom znamenitom mestu!</h2>
+                    <p class="lead">Savremeni život je povezan sa mnogim zdravstvenim rizicima, gde je brzina i kvalitet
+                        pružanja zdravstvene usluge (uz preventivu) osnovni postulat rada u našoj ustanovi.</p>
+                    <p class="fs-6 fw-light text-muted mb-0">Tu uslugu pružiće Vam, uz najsavremeniju opremu, vrhunski
+                        stručnjaci iz svojih medicinskih oblasti, koji će stečeno znanje i iskustvo u višegodišnjem radu u
+                        našim i stranim prestižnim ustanovama, koristiti u lečenju pacijenata.</p>
                 </div>
             </div>
         </div>
@@ -40,13 +44,15 @@
         <div class="container px-5 my-5">
             <div class="row gx-5 align-items-center">
                 <div class="col-lg-6 order-first order-lg-last"><img class="img-fluid rounded mb-5 mb-lg-0"
-                        src="/themes/medical/assets/img/about2.jpg" alt="..." /></div>
+                        src="/themes/medical/assets/img/parking.webp" alt="polklinika" /></div>
                 <div class="col-lg-6 pe-lg-5">
-                    <p class="text-uppercase text-primary mb-2">Our Mission & Vision</p>
-                    <h2 class="h1 fw-bold mb-3 text-black">Better Information,<br> Better Health</h2>
-                    <p class="fs-6 fw-light text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-                        est, ut esse a labore aliquam beatae expedita. Blanditiis impedit numquam libero molestiae et fugit
-                        cupiditate, quibusdam expedita, maiores eaque quisquam.</p>
+                    <p class="text-uppercase text-primary mb-2">Naša misija</p>
+                    <h2 class="h1 fw-bold mb-3 text-black">Poliklinika budućnosti,<br> zdravlje za sve!</h2>
+                    <p class="fs-6 fw-light text-muted mb-0">Naša misija je od dana osnivanja bila pružanje vrhunske
+                        medicinske usluge. Tome su prvenstveno doprineli naši zdravstveni radnici potvrđeni kao vrhunski u
+                        svojim specijalnostima, koji su svoje preglede i dijagnostiku obavljali na najsavremenijoj
+                        medicinskoj opremi, u ambijentu koji je doprineo da vam boravak u našoj Poliklinici bude prijatan.
+                    </p>
                 </div>
             </div>
         </div>
@@ -55,42 +61,22 @@
     <section class="py-5">
         <div class="container px-5 mt-5">
             <div class="text-center mb-5">
-                <h2 class="fw-bold mb-2 text-black">Our Team</h2>
-                <p class="text-muted">Dedicated to quality and your success</p>
+                <h2 class="fw-bold mb-2 text-black">Naši lekari</h2>
+                <p class="text-muted">Upoznajte uigran tim Poliklinike Vinča</p>
             </div>
             <div class="row gx-5 row-cols-1 row-cols-sm-2 row-cols-xl-4 justify-content-center">
-                <div class="col mb-5 mb-5 mb-xl-0">
-                    <div class="text-center">
-                        <img class="img-fluid rounded-circle mb-4 px-4" src="/themes/medical/assets/img/t1.png"
-                            alt="..." />
-                        <h5 class="fw-bolder">Ibbie Eckart</h5>
-                        <div class="fst-italic text-muted">Founder &amp; CEO</div>
+                @foreach ($doctors as $doctor)
+                    <div class="col mb-5 mb-5 ">
+                        <div class="text-center">
+                            @if ($doctor->image)
+                                <img class="img-fluid rounded-circle mb-4 px-4"
+                                    src="{{ $storageUrl }}{{ $doctor->image->path }}" alt="{{ $doctor->name }}">
+                            @endif
+                            <h5 class="fw-bolder">{{ $doctor->name }}</h5>
+                            <div class="fst-italic text-muted">{{ $doctor->area }}</div>
+                        </div>
                     </div>
-                </div>
-                <div class="col mb-5 mb-5 mb-xl-0">
-                    <div class="text-center">
-                        <img class="img-fluid rounded-circle mb-4 px-4" src="/themes/medical/assets/img/t2.png"
-                            alt="..." />
-                        <h5 class="fw-bolder">Arden Vasek</h5>
-                        <div class="fst-italic text-muted">CFO</div>
-                    </div>
-                </div>
-                <div class="col mb-5 mb-5 mb-sm-0">
-                    <div class="text-center">
-                        <img class="img-fluid rounded-circle mb-4 px-4" src="/themes/medical/assets/img/t3.png"
-                            alt="..." />
-                        <h5 class="fw-bolder">Toribio Nerthus</h5>
-                        <div class="fst-italic text-muted">Operations Manager</div>
-                    </div>
-                </div>
-                <div class="col mb-5">
-                    <div class="text-center">
-                        <img class="img-fluid rounded-circle mb-4 px-4" src="/themes/medical/assets/img/t4.png"
-                            alt="..." />
-                        <h5 class="fw-bolder">Malvina Cilla</h5>
-                        <div class="fst-italic text-muted">CTO</div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>

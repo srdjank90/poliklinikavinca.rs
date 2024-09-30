@@ -39,7 +39,8 @@
                     <div class="d-flex gap-3 mb-3 py-1">
                         <i class="bi bi-chat-dots text-white h5 m-0"></i>
                         <div>
-                            <p class="mb-1 fw-bold text-white"><a href="{{ route('frontend.appointment') }}">Zakažite
+                            <p class="mb-1 fw-bold text-white"><a class="text-white"
+                                    href="{{ route('frontend.appointment') }}">Zakažite
                                     Vaš pregled</a></p>
                             <small class="text-muted">U par klikova zakažite Vaš pregled.</small>
                         </div>
@@ -47,14 +48,15 @@
                     <div class="d-flex gap-3 mb-3 py-1">
                         <i class="bi bi-telephone text-white h5 m-0"></i>
                         <div>
-                            <p class="mb-1 fw-bold text-white"><a href="tel:+381605558888">Pozovite nas</a></p>
+                            <p class="mb-1 fw-bold text-white"><a class="text-white" href="tel:+381605558888">Pozovite
+                                    nas</a></p>
                             <small class="text-muted">Pozovite nas tokom radnog vremena na (060) 555 88 88.</small>
                         </div>
                     </div>
                     <div class="d-flex gap-3 py-1">
                         <i class="bi bi-geo-alt text-white h5 m-0"></i>
                         <div>
-                            <p class="mb-1 fw-bold text-white"><a
+                            <p class="mb-1 fw-bold text-white"><a class="text-white"
                                     href="https://www.google.com/maps/dir//%D0%9F%D1%80%D0%BE%D1%84%D0%B5%D1%81%D0%BE%D1%80%D0%B0+%D0%92%D0%B0%D1%81%D0%B8%D1%9B%D0%B0+24,+%D0%92%D0%B8%D0%BD%D1%87%D0%B0+11351/@44.7465637,20.5187105,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x475a775655265b17:0xd4c5b3b13f6cebe3!2m2!1d20.6011111!2d44.7465933?entry=ttu&g_ep=EgoyMDI0MDkxMS4wIKXMDSoASAFQAw%3D%3D"
                                     target="_blank">Naša lokacija</a></p>
                             <small class="text-muted">Profesora Vasića 24, 11351 Vinča, Srbija.</small>

@@ -25,12 +25,12 @@ class ServiceController extends Controller
             $search = $request->search;
         }
         if ($search !== '') {
-            $services = Service::where('title', 'LIKE', '%' . $search . '%')
+            $services = Service::with(['items', 'faqs'])->where('title', 'LIKE', '%' . $search . '%')
                 ->orWhere('name', 'LIKE', '%' . $search . '%')
                 ->orderBy('created_at', 'desc')
                 ->paginate($perPage);
         } else {
-            $services = Service::orderBy('created_at', 'desc')->paginate($perPage);
+            $services = Service::with(['items', 'faqs'])->orderBy('created_at', 'desc')->paginate($perPage);
         }
         return view('backend.services.index', compact(['services', 'search']));
     }

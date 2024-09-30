@@ -35,6 +35,8 @@
                             <th>#</th>
                             <th>{{ __('Name') }}</th>
                             <th>{{ __('Title') }}</th>
+                            <th>{{ __('Service Items') }}</th>
+                            <th>{{ __('Service Faqs') }}</th>
                             <th>{{ __('Date') }}</th>
                             <th width="120"></th>
                         </thead>
@@ -44,6 +46,8 @@
                                     <td>{{ $service->id }}</td>
                                     <td>{{ $service->name }}</td>
                                     <td>{{ $service->title }}</td>
+                                    <td>{{ count($service->items) }}</td>
+                                    <td>{{ count($service->faqs) }}</td>
                                     <td>{{ $service->created_at }}</td>
                                     <td class="lp-table-actions">
                                         <a target="_blank" class="btn btn-info btn-sm rounded-circle"
