@@ -40,8 +40,9 @@
                                                     $discountedPrice = $item->price - $discountAmount;
                                                 }
                                             @endphp
-                                            <div class="p-2 d-flex justify-content-between align-items-center">
-                                                <span><i class="bi bi-check text-primary"></i>
+                                            <div
+                                                class="p-2 d-flex justify-content-between align-items-center price-item-content">
+                                                <span style="width: 70%"><i class="bi bi-check text-primary"></i>
                                                     {{ $item->name }}</span>
                                                 @if ($item->price && $item->price != '')
                                                     <div>
@@ -250,4 +251,12 @@
             </div>
         </div>
     </section>
+    <style>
+        @media (max-width: 767px) {
+            .price-item-content {
+                flex-direction: column;
+                align-items: flex-start !important;
+            }
+        }
+    </style>
 @endsection

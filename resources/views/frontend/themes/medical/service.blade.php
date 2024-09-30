@@ -88,14 +88,18 @@
                                     }
                                 @endphp
                                 <h3 class="accordion-header" id="heading-{{ $item->id }}"><button
-                                        class="accordion-button collapsed prices-button-accordion" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#collapse-{{ $item->id }}"
-                                        aria-expanded="false" aria-controls="collapse-{{ $item->id }}">
-                                        {{ $item->name }}
+                                        class="accordion-button collapsed prices-button-accordion">
+                                        <span class="me-1">{{ $item->name }}</span>
                                         @if ($item->price && $item->price != '')
-                                            (<span style="text-decoration: line-through" class="me-1">
-                                                {{ $item->price }} RSD</span>
-                                            <span style="font-weight: bold">{{ $discountedPrice }} RSD</span>)
+                                            <div>
+                                                (<span style="text-decoration: line-through" class="me-1">
+                                                    {{ $item->price }} RSD</span>
+                                                <span style="font-weight: bold">{{ $discountedPrice }} RSD</span>)
+                                                <a class="btn btn-primary p-0 px-1 d-md-none"
+                                                    style="position: absolute;right: 10px;"
+                                                    href="{{ route('frontend.appointment') }}">
+                                                    Zakažite </a>
+                                            </div>
                                         @endif
                                     </button>
                                 </h3>
@@ -329,6 +333,14 @@
         .prices-button-accordion::after {
             width: 0 !important;
             height: 0 !important;
+        }
+
+        @media (max-width: 767px) {
+            .prices-button-accordion {
+                flex-direction: column;
+                align-items: flex-start !important;
+                margin-bottom: 10px
+            }
         }
     </style>
 @endsection

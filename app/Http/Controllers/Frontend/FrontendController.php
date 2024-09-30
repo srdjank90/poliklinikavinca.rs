@@ -72,7 +72,7 @@ class FrontendController extends Controller
 
     public function services()
     {
-        $services = Service::paginate(16);
+        $services = Service::paginate(100);
         $latestPosts = Post::where('status', 'published')->orderBy('created_at', 'asc')->limit(3)->get();
         return view('frontend.themes.' . $this->theme . '.services', compact('services', 'latestPosts'));
     }
@@ -91,7 +91,7 @@ class FrontendController extends Controller
 
     public function doctors()
     {
-        $doctors = Doctor::paginate(25);
+        $doctors = Doctor::paginate(100);
         $latestPosts = Post::where('status', 'published')->orderBy('created_at', 'asc')->limit(3)->get();
         return view('frontend.themes.' . $this->theme . '.doctors', compact('doctors', 'latestPosts'));
     }
