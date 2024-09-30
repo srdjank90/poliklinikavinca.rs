@@ -8,7 +8,7 @@
     <meta name="description" content="" />
     <meta name="author" content="SK" />
     <!-- Title -->
-    <title>MinuteShop</title>
+    <title>Poliklinika Vinča</title>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/themes/lika/assets/img/icon.png" />
     <!-- Font -->

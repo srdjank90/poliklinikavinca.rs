@@ -127,7 +127,8 @@
     <div class="container px-5">
         <div class="row align-items-center justify-content-between flex-column flex-sm-row">
             <div class="col-auto">
-                <div class="small m-0 text-white"><a href="https://da.org.rs">Copyright &copy; Allinclusive. 2024</a>
+                <div class="small m-0 text-white"><a class="text-white" href="https://da.org.rs">Copyright &copy;
+                        Allinclusive. 2024</a>
                 </div>
             </div>
 

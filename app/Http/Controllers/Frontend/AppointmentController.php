@@ -27,7 +27,7 @@ class AppointmentController extends Controller
         // For demonstration, we'll use Laravel's built-in email
         Mail::send('frontend.themes.' . $this->theme . '.emails.appointment', ['request' => $request], function ($message) use ($request) {
             $message->from($request->email, $request->name);
-            $message->to('info@studiozadizajn.rs')->subject('Zakazivanje pregleda');
+            $message->to('info@poliklinikavinca.rs')->subject('Zakazivanje pregleda');
         });
 
         // Response

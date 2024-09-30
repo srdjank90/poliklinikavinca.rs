@@ -28,7 +28,7 @@ class ContactController extends Controller
         // For demonstration, we'll use Laravel's built-in email
         Mail::send('frontend.themes.' . $this->theme . '.emails.contact', ['request' => $request], function ($message) use ($request) {
             $message->from($request->email, $request->name);
-            $message->to('info@studiozadizajn.rs')->subject('Kontakt sa sajta');
+            $message->to('info@poliklinikavinca.rs')->subject('Kontakt sa sajta');
         });
 
         // Response
