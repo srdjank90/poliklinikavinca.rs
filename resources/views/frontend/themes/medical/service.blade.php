@@ -39,12 +39,7 @@
             <div class="row gx-5 justify-content-center">
                 <div class="col-lg-6">
                     <div class="text-center">
-                        <p class="lead fw-normal text-muted">
-                            @php
-                                $content = strip_tags($service->content);
-                            @endphp
-                            {{ $content }}
-                        </p>
+                        {!! $service->content !!}
                     </div>
                 </div>
             </div>
@@ -132,8 +127,7 @@
                                                     <div class="mb-3">
                                                         <h5 class="fw-bold mb-1">{{ $service->name }}</h5>
                                                         <p class="fw-light mb-0 text-primary small">
-                                                            Dijagnostika, prevencija i lečenje ženskog
-                                                            reproduktivnog sistema
+                                                            {{ $service->subtitle }}
                                                         </p>
                                                     </div>
                                                     <p class="text-muted fw-light mb-0">
@@ -159,7 +153,7 @@
         <section class="py-5">
             <div class="container px-5 mt-5">
                 <div class="text-center mb-5">
-                    <h2 class="fw-bold mb-2 text-black">Tim Doktora</h2>
+                    <h2 class="fw-bold mb-2 text-black">Naši lekari</h2>
                     <p class="text-muted"></p>
                 </div>
                 <div class="row gx-5 row-cols-1 row-cols-sm-2 row-cols-xl-4 justify-content-center">

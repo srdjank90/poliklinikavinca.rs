@@ -61,12 +61,17 @@
                         <div class="card mb-3">
                             <div class="card-body">
                                 <h6 class="p-0 m-0">{{ __('Service Content') }}</h6>
-                                <small><i
-                                        class="bi bi-info-circle-fill text-info me-1"></i>{{ __('Content of a service that will be shown on a frontent') }}</small>
+
                                 <div class="form-group mb-3">
                                     <label for="title">{{ __('Title') }}</label>
                                     <input type="text" name="title" id="title" class="form-control"
                                         value="{{ $service->title }}">
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <label for="subtitle">{{ __('Subtitle') }}</label>
+                                    <input type="text" name="subtitle" id="subtitle" class="form-control"
+                                        value="{{ $service->subtitle }}">
                                 </div>
 
                                 <div class="form-group mb-3">

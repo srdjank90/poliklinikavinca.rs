@@ -33,8 +33,7 @@
                                     <div class="mb-3">
                                         <h5 class="fw-bold mb-1">{{ $service->name }}</h5>
                                         <p class="fw-light mb-0 text-primary small">
-                                            Dijagnostika, prevencija i lečenje ženskog
-                                            reproduktivnog sistema
+                                            {{ $service->subtitle }}
                                         </p>
                                     </div>
                                     <p class="text-muted fw-light mb-0">
