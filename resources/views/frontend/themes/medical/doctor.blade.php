@@ -168,7 +168,7 @@
                                     </h5>
                                 </a>
                                 <p class="card-text mb-0">
-                                    {{ $lPost->excerpt }}
+                                    {!! $lPost->excerpt !!}
                                 </p>
                             </div>
                         </div>
