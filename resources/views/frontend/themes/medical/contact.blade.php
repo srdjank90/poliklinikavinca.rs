@@ -1,4 +1,7 @@
 @extends('frontend.themes.medical.layout.layout')
+@section('title', 'Poliklinika Vinča | Kontakt')
+@section('description', '')
+@section('keywords', '')
 @section('content')
     <!-- Page content-->
     <div class="py-5">

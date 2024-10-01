@@ -1,4 +1,7 @@
 @extends('frontend.themes.medical.layout.layout')
+@section('title', $post->seo->title)
+@section('description', $post->seo->description)
+@section('keywords', $post->seo->keywords)
 @section('content')
     <div class="bg-primary">
         <header class="bg-primary py-5 inner-header">

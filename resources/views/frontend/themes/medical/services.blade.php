@@ -1,4 +1,7 @@
 @extends('frontend.themes.medical.layout.layout')
+@section('title', 'Poliklinika Vinča | Sve naše usluge na jednom mestu')
+@section('description', '')
+@section('keywords', '')
 @section('content')
     <div class="bg-primary">
         <!-- Header-->

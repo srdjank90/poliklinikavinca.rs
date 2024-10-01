@@ -1,4 +1,7 @@
 @extends('frontend.themes.medical.layout.layout')
+@section('title', $doctor->seo->title)
+@section('description', $doctor->seo->description)
+@section('keywords', $doctor->seo->keywords)
 @section('content')
     <div class="bg-primary">
 

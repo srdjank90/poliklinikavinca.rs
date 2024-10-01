@@ -5,10 +5,12 @@
     <!-- Required Meta Tags Always Come First -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
+    <title>@yield('title','Poliklinika Vinča')</title>
+    <meta name="description" content="@yield('description','')" />
+    <meta name="keywords" content="@yield('keywords','')" />
     <meta name="author" content="SK" />
     <!-- Title -->
-    <title>Poliklinika Vinča</title>
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/themes/lika/assets/img/icon.png" />
     <!-- Font -->
