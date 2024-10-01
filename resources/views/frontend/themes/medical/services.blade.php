@@ -1,5 +1,5 @@
 @extends('frontend.themes.medical.layout.layout')
-@section('title', 'Poliklinika Vinča | Sve naše usluge na jednom mestu')
+@section('title', 'Sve naše usluge na jednom mestu | Poliklinika Vinča')
 @section('description', '')
 @section('keywords', '')
 @section('content')

@@ -1,5 +1,5 @@
 @extends('frontend.themes.medical.layout.layout')
-@section('title', 'Poliklinika Vinča | Kompletan cenovnik usluga')
+@section('title', 'Kompletan cenovnik usluga | Poliklinika Vinča')
 @section('description', '')
 @section('keywords', '')
 @section('content')
@@ -49,9 +49,13 @@
                                                     {{ $item->name }}</span>
                                                 @if ($item->price && $item->price != '')
                                                     <div>
-                                                        (<span style="text-decoration: line-through" class="me-1">
-                                                            {{ $item->price }} RSD</span>
-                                                        <span style="font-weight: bold">{{ $discountedPrice }} RSD</span>)
+                                                        @if ($discountedPrice)
+                                                            (<span style="text-decoration: line-through" class="me-1">
+                                                                {{ $item->price }} RSD</span>
+                                                            <span style="font-weight: bold">{{ $discountedPrice }} RSD</span>)
+                                                        @else
+                                                            <span style="font-weight: bold">{{ $item->price }} RSD</span>
+                                                        @endif
                                                     </div>
                                                 @endif
                                             </div>

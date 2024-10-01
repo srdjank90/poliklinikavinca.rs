@@ -2,6 +2,10 @@
 @section('title', $service->seo->title)
 @section('description', $service->seo->description)
 @section('keywords', $service->seo->keywords)
+@section('ogTitle', $service->seo->title)
+@section('ogDescription', $service->seo->description)
+@section('ogImage', $service->image ? $storageUrl . $service->image->path : '')
+@section('ogUrl', route('frontend.service', $service->slug))
 @section('content')
     <div class="bg-primary">
         <!-- Header-->
@@ -95,9 +99,13 @@
                                         <span class="me-1">{{ $item->name }}</span>
                                         @if ($item->price && $item->price != '')
                                             <div>
+                                                @if ($discountedPrice)
                                                 (<span style="text-decoration: line-through" class="me-1">
                                                     {{ $item->price }} RSD</span>
                                                 <span style="font-weight: bold">{{ $discountedPrice }} RSD</span>)
+                                                @else
+                                                <span style="font-weight: bold">({{ $item->price }} RSD)</span>
+                                                @endif
                                                 <a class="btn btn-primary p-0 px-1 d-md-none"
                                                     style="position: absolute;right: 10px;"
                                                     href="{{ route('frontend.appointment') }}">

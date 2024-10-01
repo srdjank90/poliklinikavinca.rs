@@ -2,6 +2,10 @@
 @section('title', $post->seo->title)
 @section('description', $post->seo->description)
 @section('keywords', $post->seo->keywords)
+@section('ogTitle', $post->seo->title)
+@section('ogDescription', $post->seo->description)
+@section('ogImage', $post->image ? $storageUrl . $post->image->path : '')
+@section('ogUrl', route('frontend.post', $post->slug))
 @section('content')
     <div class="bg-primary">
         <header class="bg-primary py-5 inner-header">

@@ -2,6 +2,10 @@
 @section('title', $doctor->seo->title)
 @section('description', $doctor->seo->description)
 @section('keywords', $doctor->seo->keywords)
+@section('ogTitle', $doctor->seo->title)
+@section('ogDescription', $doctor->seo->description)
+@section('ogImage', '')
+@section('ogUrl', route('frontend.doctor', $doctor->slug))
 @section('content')
     <div class="bg-primary">
 
