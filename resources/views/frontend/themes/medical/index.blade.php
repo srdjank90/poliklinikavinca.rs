@@ -1,7 +1,7 @@
 @extends('frontend.themes.medical.layout.layout')
-@section('title', $seoIndex['setting_seo_title_opt'] ? $seoIndex['setting_seo_title_opt'] : '')
-@section('description', $seoIndex['setting_seo_description_opt'] ? $seoIndex['setting_seo_description_opt'] : '')
-@section('keywords', $seoIndex['setting_seo_keywords_opt'] ? $seoIndex['setting_seo_keywords_opt'] : '')
+@section('title', isset($seoIndex['setting_seo_title_opt']) ? $seoIndex['setting_seo_title_opt'] : '')
+@section('description', isset($seoIndex['setting_seo_description_opt']) ? $seoIndex['setting_seo_description_opt'] : '')
+@section('keywords', isset($seoIndex['setting_seo_keywords_opt']) ? $seoIndex['setting_seo_keywords_opt'] : '')
 @section('content')
     <div class="bg-primary">
         <!-- Header-->
