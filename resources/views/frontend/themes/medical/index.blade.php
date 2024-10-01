@@ -1,4 +1,7 @@
 @extends('frontend.themes.medical.layout.layout')
+@section('title', $seoIndex['setting_seo_title_opt'] ? $seoIndex['setting_seo_title_opt'] : '')
+@section('description', $seoIndex['setting_seo_description_opt'] ? $seoIndex['setting_seo_description_opt'] : '')
+@section('keywords', $seoIndex['setting_seo_keywords_opt'] ? $seoIndex['setting_seo_keywords_opt'] : '')
 @section('content')
     <div class="bg-primary">
         <!-- Header-->
@@ -10,8 +13,8 @@
                             <h1 class="display-5 fw-bolder text-white mb-4">Poliklinika Vinča. <span
                                     class="fw-bold text-warning">Poliklinika budućnosti</span> vaš najbliži put do zdravlja!
                             </h1>
-                            <p class="lead fw-light text-white-50 mb-4">Kompletna zdravstvena usluga na jednom mestu, sa 20
-                                posto popusta i u oktobru.</p>
+                            <p class="lead fw-light text-white-50 mb-4">Kompletna zdravstvena usluga na jednom mestu, u
+                                saradnji i sa Vašim zdravstvenim osiguranjem.</p>
                             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
                                 <a class="btn btn-light fw-bold text-primary fs-7 rounded-3 px-4 py-3 text-uppercase me-sm-1"
                                     href="{{ route('frontend.pricing') }}"> Pogledajte cenovnik </a>

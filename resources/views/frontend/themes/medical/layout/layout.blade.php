@@ -5,17 +5,18 @@
     <!-- Required Meta Tags Always Come First -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>@yield('title','Poliklinika Vinča')</title>
-    <meta name="description" content="@yield('description','')" />
-    <meta name="keywords" content="@yield('keywords','')" />
+    <title>@yield('title', 'Poliklinika Vinča')</title>
+    <meta name="description" content="@yield('description', '')" />
+    <meta name="keywords" content="@yield('keywords', '')" />
     <meta name="author" content="SK" />
 
     <!-- OG Tags -->
-    <meta property="og:title" content="@yield('ogTitle','Poliklinika Vinča')" />
-    <meta property="og:image" content="@yield('ogImage','')" />
-    <meta property="og:description" content="@yield('ogDescription','')" />
-    <meta property="og:url" content="@yield('ogUrl','')" />
-    <meta property="og:type" content="@yield('ogType','website')" />
+    <meta property="og:title" content="@yield('ogTitle', 'Poliklinika Vinča')" />
+    <meta property="og:image" content="@yield('ogImage', '')" />
+    <meta property="og:image" content="https://poliklinika.cfd/themes/medical/assets/img/poliklinika-vinca.webp" />
+    <meta property="og:description" content="@yield('ogDescription', '')" />
+    <meta property="og:url" content="@yield('ogUrl', '')" />
+    <meta property="og:type" content="@yield('ogType', 'website')" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/themes/lika/assets/img/icon.png" />

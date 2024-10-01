@@ -12,19 +12,20 @@
                     <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">Usluge</a>
                     <ul class="dropdown-menu m-0 border-0 shadow-sm p-2 dropdown-menu-end">
-                        <li><a class="dropdown-item px-3 py-2 rounded"
+                        <li><a style="white-space: normal;" class="dropdown-item px-3 py-2 rounded"
                                 href="{{ route('frontend.service', 'ginekologija') }}">Ginekologija</a></li>
-                        <li><a class="dropdown-item px-3 py-2 rounded"
+                        <li><a style="white-space: normal;" class="dropdown-item px-3 py-2 rounded"
                                 href="{{ route('frontend.service', 'radiologija') }}">Radiologija</a></li>
-                        <li><a class="dropdown-item px-3 py-2 rounded"
+                        <li><a style="white-space: normal;" class="dropdown-item px-3 py-2 rounded"
                                 href="{{ route('frontend.service', 'neurologija') }}">Neurologija</a></li>
-                        <li><a class="dropdown-item px-3 py-2 rounded"
+                        <li><a style="white-space: normal;" class="dropdown-item px-3 py-2 rounded"
                                 href="{{ route('frontend.service', 'kardiologija') }}">Kardiologija</a></li>
-                        <li><a class="dropdown-item px-3 py-2 rounded"
+                        <li><a style="white-space: normal;" class="dropdown-item px-3 py-2 rounded"
                                 href="{{ route('frontend.service', 'ultrazvuk') }}">Ultrazvuk</a></li>
-                        <li><a class="dropdown-item px-3 py-2 rounded"
+                        <li><a style="white-space: normal;" class="dropdown-item px-3 py-2 rounded"
                                 href="{{ route('frontend.service', 'laboratorija') }}">Laboratorija</a></li>
-                        <li><a class="dropdown-item px-3 py-2 rounded" href="{{ route('frontend.services') }}"><b>Sve
+                        <li><a style="white-space: normal;" class="dropdown-item px-3 py-2 rounded"
+                                href="{{ route('frontend.services') }}"><b>Sve
                                     usluge</b></a></li>
                     </ul>
                 </li>
@@ -38,14 +39,15 @@
                         <!-- Array of Posts -->
                         @foreach ($menuPosts as $menuPost)
                             <li>
-                                <a class="dropdown-item px-3 py-2 rounded"
+                                <a class="dropdown-item px-3 py-2 rounded" style="white-space: normal;"
                                     href="{{ route('frontend.post', $menuPost->slug) }}">
                                     {{ $menuPost->title }}
                                 </a>
                             </li>
                         @endforeach
 
-                        <li><a class="dropdown-item px-3 py-2 rounded" href="{{ route('frontend.posts') }}"><b>Svi
+                        <li><a class="dropdown-item px-3 py-2 rounded" style="white-space: normal;"
+                                href="{{ route('frontend.posts') }}"><b>Svi
                                     saveti</b></a></li>
                     </ul>
                 </li>

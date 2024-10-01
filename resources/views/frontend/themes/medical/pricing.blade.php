@@ -10,8 +10,7 @@
                     <div class="col-lg-12">
                         <div class="text-center">
                             <h1 class="fw-bold text-white">Kompletan cenovnik usluga</h1>
-                            <p class="lead fw-normal text-white-50 mb-0">Kompletna zdravstvena usluga na jednom mestu, sa 20
-                                posto popusta i u oktobru</p>
+                            <p class="lead fw-normal text-white-50 mb-0">Kompletna zdravstvena usluga na jednom mestu, u saradnji i sa Vašim zdravstvenim osiguranjem (DDOR, SAVA, TRIGLAV, WIENER STADTISHE, GENERALI, DUNAV, GLOBOS).</p>
                         </div>
                     </div>
                 </div>
@@ -22,6 +21,7 @@
         <div class="container px-5 my-5">
             <div class="row gx-5">
                 <div class="col-xl-8">
+				<p class="mb-5 fs-5">Poliklinika Vinča by Profesional Medic i laboratorija za medicinsku biohemiju Profesional Lab svim penzionerima i osobama sa invaliditetom odobravaju stalni popust od 5% na sve usluge.</p>
                     <!-- Service Prices -->
                     @foreach ($services as $service)
                         <div class="accordion mb-2" id="accordionExample">
