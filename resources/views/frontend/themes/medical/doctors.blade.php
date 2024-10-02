@@ -24,9 +24,9 @@
             <div class="row gx-5">
                 @foreach ($doctors as $doctor)
                     <div class="col-lg-4">
-                        <div class="position-relative mb-5">
-                            <div class="bg-white shadow-sm p-4 rounded-3">
-                                <div class="d-flex mb-3 align-items-center">
+                        <div class="doctor-item-wrapper position-relative mb-5">
+                            <div class="doctor-item bg-white shadow-sm p-4 rounded-3">
+                                <div class="doctor-data">
                                     @if ($doctor->image)
                                         <img class="img-fluid rounded-circle" style="width: 150px;height:150px"
                                             src="{{ $storageUrl }}{{ $doctor->image->path }}" alt="{{ $doctor->name }}">
@@ -38,8 +38,7 @@
                                         <p class="fw-light mb-0 text-muted small">{{ $doctor->area }}</p>
                                     </div>
                                 </div>
-                                <p class="text-muted fw-light mb-4"></p>
-                                <div class="d-flex align-items-center justify-content-end">
+                                <div class="doctor-actions">
                                     <a href="{{ route('frontend.appointment') }}"
                                         class="btn btn-outline-primary stretched-link">
                                         Zakazivanje</a>
@@ -51,6 +50,32 @@
             </div>
         </div>
     </section>
+
+    <style>
+        .doctor-data{
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        .doctor-actions{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .doctor-data{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+            }
+            .doctor-actions{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    </style>
 
     <!-- Appointment -->
     <section class="py-5 bg-warning">

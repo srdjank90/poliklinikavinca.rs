@@ -56,6 +56,10 @@
                                                         @else
                                                             <span style="font-weight: bold">{{ $item->price }} RSD</span>
                                                         @endif
+                                                        <a class="btn btn-primary p-0 px-1 d-md-none"
+                                                            style="position: absolute;right: 35px;"
+                                                            href="{{ route('frontend.appointment') }}">
+                                                            Zakažite </a>
                                                     </div>
                                                 @endif
                                             </div>

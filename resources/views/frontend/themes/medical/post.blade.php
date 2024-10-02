@@ -18,7 +18,7 @@
         <div class="container px-5 mb-5">
             <div class="row gx-5">
                 <div class="col-lg-9 mx-auto">
-                    <div class="bg-white shadow-sm p-5 rounded-3">
+                    <div class="bg-white shadow-sm p-4 rounded-3">
                         <h1 class="fw-bold text-black mb-3">
                             {{ $post->title }}
                         </h1>

@@ -30,13 +30,13 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="mb-3 col-6 pe-2">
+                                <div class="mb-3 col-12 col-md-6 pe-2">
                                     <label class="form-label small text-muted">Telefon <small
                                             class="text-danger">*</small></label>
                                     <input type="text" name="phone" class="form-control"
                                         placeholder="Unesite vaš broj">
                                 </div>
-                                <div class="mb-3 col-6 ps-2">
+                                <div class="mb-3 col-12 col-md-6 ps-2">
                                     <label class="form-label small text-muted">E-mail adresa <small
                                             class="text-danger">*</small></label>
                                     <input type="email" name="email" class="form-control"

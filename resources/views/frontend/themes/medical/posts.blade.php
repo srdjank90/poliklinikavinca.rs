@@ -27,9 +27,8 @@
     <!-- Page Content-->
     <section class="py-5">
         <div class="container px-5 pt-5">
-
-            @foreach ($posts as $post)
-                <div class="row gx-5">
+            <div class="row gx-5">
+                @foreach ($posts as $post)
                     <div class="col-lg-4 mb-5">
                         <div class="card h-100 shadow-sm rounded-3 border-0">
                             @if ($post->image)
@@ -49,14 +48,13 @@
                                     </h5>
                                 </a>
                                 <p class="card-text mb-0">
-                                    {{ $post->excerpt }}
+                                    {!! $post->excerpt !!}
                                 </p>
                             </div>
                         </div>
                     </div>
-            @endforeach
-
-        </div>
+                @endforeach
+            </div>
         </div>
     </section>
 @endsection
