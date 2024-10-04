@@ -31,7 +31,7 @@
         integrity='sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=='
         crossorigin='anonymous' />
     <link href="/themes/medical/assets/css/styles.css" rel="stylesheet" />
-    <meta name="robots" content="noindex, nofollow">
+    <meta name="robots" content="index, follow">
 </head>
 
 <body class="d-flex flex-column h-100 bg-light">
