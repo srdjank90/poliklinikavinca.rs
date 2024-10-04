@@ -4037,6 +4037,7 @@ fieldset:disabled .btn {
     }
     .navbar-expand-lg .navbar-nav .dropdown-menu {
         position: absolute;
+        width: 310px;
     }
     .navbar-expand-lg .navbar-nav .nav-link {
         padding-right: 0.5rem;

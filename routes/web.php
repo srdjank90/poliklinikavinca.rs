@@ -94,6 +94,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/backend/settings/theme', [App\Http\Controllers\Backend\SettingsController::class, 'theme'])->name('backend.settings.theme');
 });
 
+Route::redirect('/ultrazvucna-dijagnostika', '/usluga/ultrazvuk', 301);
 
 // Frontend
 Route::get('/', [App\Http\Controllers\Frontend\FrontendController::class, 'index'])->name('frontend.index');
