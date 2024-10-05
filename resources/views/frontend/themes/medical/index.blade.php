@@ -74,7 +74,7 @@
                                     class="bi bi-heart-pulse-fill"></i></div>
                             <h2 class="h5">{{ $popularServices[3]->name }}</h2>
                             <p class="mb-0">{{ $popularServices[3]->title }}</p>
-                            <a href="{{ route('frontend.service', $popularServices[2]->slug) }}"
+                            <a href="{{ route('frontend.service', $popularServices[3]->slug) }}"
                                 class="btn btn-warning text-uppercase fw-bold">Saznajte više</a>
                         </div>
                     </div>
@@ -202,7 +202,7 @@
                 <div class="ms-xl-4">
                     <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
                         <a class="btn btn-light fw-bold text-primary fs-7 rounded-3 px-4 py-3 text-uppercase me-sm-1"
-                            href="{{ route('frontend.contact') }}"> Zakažite pregled </a>
+                            href="{{ route('frontend.appointment') }}"> Zakažite pregled </a>
                         <a class="btn btn-outline-light fw-bold fs-7 rounded-3 px-4 py-3 text-uppercase"
                             href="tel:+381605558888"> <i class="bi bi-telephone"></i> 060 555 88 88 </a>
                     </div>

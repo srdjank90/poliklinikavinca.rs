@@ -119,7 +119,7 @@ Route::redirect('/sanitetski-prevoz', '/usluga/sanitetski-prevoz', 301);
 Route::redirect('/reumatologija', '/usluga/reumatologija', 301);
 Route::redirect('/laboratorija', '/usluga/laboratorija', 301);
 
-Route::redirect('/nast-tim', '/doktori', 301);
+Route::redirect('/nas-tim', '/doktori', 301);
 Route::redirect('/galerija', '/o-nama', 301);
 
 

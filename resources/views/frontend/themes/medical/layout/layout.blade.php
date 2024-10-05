@@ -18,6 +18,8 @@
     <meta property="og:url" content="@yield('ogUrl', '')" />
     <meta property="og:type" content="@yield('ogType', 'website')" />
 
+    <link rel="canonical" href="{{ url()->current() }}" />
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/themes/lika/assets/img/icon.png" />
     <!-- Font -->

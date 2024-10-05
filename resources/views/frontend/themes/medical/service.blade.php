@@ -28,6 +28,30 @@
             </div>
         </header>
     </div>
+
+    <!-- Schema Markup for the Blog Post -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "headline": "{{ $service->name }}",
+        "author": {
+            "@type": "Person",
+            "name": ""
+        },
+        "datePublished": "{{ $service->created_at->toIso8601String() }}",
+        "articleBody": "{!! Str::limit(strip_tags($service->content), 200) !!}",
+            "publisher": {
+            "@type": "Organization",
+            "name": "Poliklinika Vinča",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "{{ $service->image ? $storageUrl . $service->image->path : '' }}"
+            }
+        }
+    }
+    </script>
+
     <!-- Page Content-->
     <div class="p-5 bg-primary"></div>
     <div class="pb-5 mt-n5">
