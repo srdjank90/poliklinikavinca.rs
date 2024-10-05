@@ -52,7 +52,22 @@
                         </div>
                     </div>
                 @endforeach
-
+                <!-- Add the schema markup for medical specialties -->
+                <script type="application/ld+json">
+                {
+                    "@context": "https://schema.org",
+                    "@type": "MedicalOrganization",
+                    "name": "Poliklinika Vinča",
+                    "medicalSpecialty": [
+                        @foreach($services as $service)
+                        {
+                            "@type": "MedicalSpecialty",
+                            "name": "{{ $service->name }}"
+                        }@if (!$loop->last),@endif
+                        @endforeach
+                    ]
+                }
+                </script>
             </div>
     </section>
     <section class="py-5 bg-warning">

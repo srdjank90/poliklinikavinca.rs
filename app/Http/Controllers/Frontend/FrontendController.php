@@ -11,6 +11,7 @@ use App\Models\Post;
 use App\Models\PostCategory;
 use App\Models\Service;
 use Illuminate\Support\Facades\Log;
+use Spatie\SchemaOrg\Schema;
 
 class FrontendController extends Controller
 {
@@ -64,13 +65,19 @@ class FrontendController extends Controller
     public function post($slug)
     {
         $post = Post::where('slug', $slug)->first();
+        $blogPostSchema = Schema::blogPosting()
+            ->headline($post->title)
+            ->articleBody($post->content)
+            //->author($post->author->name)
+            ->datePublished($post->created_at->toIso8601String())
+            ->url(url()->current());
         $latestPosts = Post::where('status', 'published')->orderBy('created_at', 'desc')->limit(3)->get();
         // Handle 404
         if (!$post) {
             return view('frontend.themes.' . $this->theme . '.404', []);
         }
 
-        return view('frontend.themes.' . $this->theme . '.post', compact('post', 'latestPosts'));
+        return view('frontend.themes.' . $this->theme . '.post', compact('post', 'latestPosts', 'blogPostSchema'));
     }
 
     public function services()

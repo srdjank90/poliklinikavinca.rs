@@ -44,6 +44,10 @@
                                 </div>
                             </section>
                         </div>
+                        <!-- Add the schema markup -->
+                        <script type="application/ld+json">
+                            {!! $blogPostSchema->toScript() !!}
+                        </script>
                     </div>
                 </div>
             </div>
