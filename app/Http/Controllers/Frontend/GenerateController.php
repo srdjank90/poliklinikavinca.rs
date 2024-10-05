@@ -21,7 +21,7 @@ class GenerateController extends Controller
         $sitemap->add(Url::create('/')->setPriority(1.0)->setChangeFrequency('daily')->setLastModificationDate(Carbon::now()->subDays(6)))
             ->add(Url::create('/o-nama')->setPriority(0.8)->setChangeFrequency('monthly')->setLastModificationDate(Carbon::now()->subDays(6)))
             ->add(Url::create('/blog')->setPriority(0.8)->setChangeFrequency('monthly')->setLastModificationDate(Carbon::now()->subDays(6)))
-            ->add(Url::create('/najcesca-pitanja')->setPriority(0.8)->setChangeFrequency('monthly')->setLastModificationDate(Carbon::now()->subDays(6)))
+            //->add(Url::create('/najcesca-pitanja')->setPriority(0.8)->setChangeFrequency('monthly')->setLastModificationDate(Carbon::now()->subDays(6)))
             ->add(Url::create('/cenovnik')->setPriority(0.8)->setChangeFrequency('monthly')->setLastModificationDate(Carbon::now()->subDays(6)))
             ->add(Url::create('/zakazi-pregled')->setPriority(0.8)->setChangeFrequency('monthly')->setLastModificationDate(Carbon::now()->subDays(6)))
             ->add(Url::create('/usluge')->setPriority(0.8)->setChangeFrequency('monthly')->setLastModificationDate(Carbon::now()->subDays(6)))

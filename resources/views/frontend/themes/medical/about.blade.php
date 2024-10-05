@@ -26,7 +26,7 @@
     <section class="py-5" id="scroll-target">
         <div class="container px-5 my-5">
             <div class="row gx-5 align-items-center">
-                <div class="col-lg-6"><img class="img-fluid rounded mb-5 mb-lg-0"
+                <div class="col-lg-6"><img class="img-fluid rounded mb-5 mb-lg-0" loading="lazy"
                         src="/themes/medical/assets/img/poliklinika-vinca.webp" alt="poliklinika" />
                 </div>
                 <div class="col-lg-6 ps-lg-5">
@@ -47,7 +47,7 @@
         <div class="container px-5 my-5">
             <div class="row gx-5 align-items-center">
                 <div class="col-lg-6 order-first order-lg-last"><img class="img-fluid rounded mb-5 mb-lg-0"
-                        src="/themes/medical/assets/img/parking.webp" alt="polklinika" /></div>
+                        src="/themes/medical/assets/img/parking.webp" loading="lazy" alt="polklinika" /></div>
                 <div class="col-lg-6 pe-lg-5">
                     <p class="text-uppercase text-primary mb-2">Naša misija</p>
                     <h2 class="h1 fw-bold mb-3 text-black">Poliklinika budućnosti,<br> zdravlje za sve!</h2>
@@ -72,7 +72,7 @@
                     <div class="col mb-5 mb-5 ">
                         <div class="text-center">
                             @if ($doctor->image)
-                                <img class="img-fluid rounded-circle mb-4 px-4"
+                                <img class="img-fluid rounded-circle mb-4 px-4" loading="lazy"
                                     src="{{ $storageUrl }}{{ $doctor->image->path }}" alt="{{ $doctor->name }}">
                             @endif
                             <h5 class="fw-bolder">{{ $doctor->name }}</h5>
@@ -177,7 +177,7 @@
                         <div class="card h-100 shadow-sm rounded-3 border-0">
                             @if ($lPost->image)
                                 <img class="card-img-top" src="{{ $storageUrl }}{{ $lPost->image->path }}"
-                                    alt="{{ $lPost->title }}">
+                                    alt="{{ $lPost->title }}" loading="lazy">
                             @endif
                             <div class="card-body p-4">
                                 @foreach ($lPost->categories as $lpCategory)

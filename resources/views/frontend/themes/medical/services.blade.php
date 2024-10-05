@@ -30,7 +30,8 @@
                             <div class="bg-white shadow-sm overflow-hidden rounded-3">
                                 @if ($service->image)
                                     <a class="text-black" href="{{ route('frontend.service', $service->slug) }}"><img
-                                            class="card-img-top" src="{{ $storageUrl }}{{ $service->image->path }}"
+                                            class="card-img-top" loading="lazy"
+                                            src="{{ $storageUrl }}{{ $service->image->path }}"
                                             alt="{{ $service->name }}"></a>
                                 @endif
                                 <div class="p-4">
@@ -144,8 +145,8 @@
                     <div class="col-lg-4 mb-5">
                         <div class="card h-100 shadow-sm rounded-3 border-0">
                             @if ($lPost->image)
-                                <img class="card-img-top" src="{{ $storageUrl }}{{ $lPost->image->path }}"
-                                    alt="{{ $lPost->title }}">
+                                <img class="card-img-top" loading="lazy"
+                                    src="{{ $storageUrl }}{{ $lPost->image->path }}" alt="{{ $lPost->title }}">
                             @endif
                             <div class="card-body p-4">
                                 @foreach ($lPost->categories as $lpCategory)

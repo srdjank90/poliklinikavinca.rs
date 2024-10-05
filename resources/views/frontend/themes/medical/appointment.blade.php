@@ -59,7 +59,8 @@
                     </div>
                 </div>
                 <div class="col-lg-6 text-center">
-                    <img src="/themes/medical/assets/img/appointment.svg" class="img-fluid" alt="yoursitename">
+                    <img src="/themes/medical/assets/img/appointment.svg" loading="lazy" class="img-fluid"
+                        alt="yoursitename">
                     <h1 class="text-white display-4 fw-bold"> (060) 555 88 88
                     </h1>
                     <p class="fs-6 mb-5 text-white-50">U slučaju da imate problema da popunite formu za online zakazivanje,

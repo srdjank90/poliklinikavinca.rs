@@ -31,7 +31,7 @@
                     <div class="sidebar-fixed">
                         <div class="position-relative mb-5">
                             <div class="bg-primary shadow-sm overflow-hidden rounded-3 mb-3">
-                                <img class="card-img-top" src="img/d-profile.webp" alt="...">
+                                <img class="card-img-top" src="img/d-profile.webp" loading="lazy" alt="...">
                                 <div class="p-4">
                                     <div>
                                         <h5 class="fw-bold text-white mb-1">Tom Smith Bert</h5>
@@ -159,7 +159,7 @@
                     <div class="col-lg-4 mb-5">
                         <div class="card h-100 shadow-sm rounded-3 border-0">
                             @if ($lPost->image)
-                                <img class="card-img-top" src="{{ $storageUrl }}{{ $lPost->image->path }}"
+                                <img class="card-img-top" loading="lazy" src="{{ $storageUrl }}{{ $lPost->image->path }}"
                                     alt="{{ $lPost->title }}">
                             @endif
                             <div class="card-body p-4">

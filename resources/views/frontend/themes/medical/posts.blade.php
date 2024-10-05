@@ -33,7 +33,7 @@
                         <div class="card h-100 shadow-sm rounded-3 border-0">
                             @if ($post->image)
                                 <img class="card-img-top" src="{{ $storageUrl }}{{ $post->image->path }}"
-                                    alt="{{ $post->title }}">
+                                    alt="{{ $post->title }}" loading="lazy">
                             @endif
                             <div class="card-body p-4">
                                 @foreach ($post->categories as $pcategory)

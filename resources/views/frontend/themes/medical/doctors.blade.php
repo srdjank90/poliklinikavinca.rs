@@ -28,7 +28,8 @@
                             <div class="doctor-item bg-white shadow-sm p-4 rounded-3">
                                 <div class="doctor-data">
                                     @if ($doctor->image)
-                                        <img class="img-fluid rounded-circle" style="width: 150px;height:150px"
+                                        <img class="img-fluid rounded-circle" loading="lazy"
+                                            style="width: 150px;height:150px"
                                             src="{{ $storageUrl }}{{ $doctor->image->path }}" alt="{{ $doctor->name }}">
                                     @endif
 
@@ -52,24 +53,26 @@
     </section>
 
     <style>
-        .doctor-data{
+        .doctor-data {
             display: flex;
             align-items: center;
             margin-bottom: 1.5rem;
         }
-        .doctor-actions{
+
+        .doctor-actions {
             display: flex;
             justify-content: flex-end;
             align-items: center;
         }
 
         @media (max-width: 768px) {
-            .doctor-data{
+            .doctor-data {
                 display: flex;
                 flex-direction: column;
                 text-align: center;
             }
-            .doctor-actions{
+
+            .doctor-actions {
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -171,7 +174,7 @@
                     <div class="col-lg-4 mb-5">
                         <div class="card h-100 shadow-sm rounded-3 border-0">
                             @if ($lPost->image)
-                                <img class="card-img-top" src="{{ $storageUrl }}{{ $lPost->image->path }}"
+                                <img class="card-img-top" loading="lazy" src="{{ $storageUrl }}{{ $lPost->image->path }}"
                                     alt="{{ $lPost->title }}">
                             @endif
                             <div class="card-body p-4">

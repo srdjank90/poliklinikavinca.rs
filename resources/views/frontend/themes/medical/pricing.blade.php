@@ -10,7 +10,9 @@
                     <div class="col-lg-12">
                         <div class="text-center">
                             <h1 class="fw-bold text-white">Kompletan cenovnik usluga</h1>
-                            <p class="lead fw-normal text-white-50 mb-0">Kompletna zdravstvena usluga na jednom mestu, u saradnji i sa Vašim zdravstvenim osiguranjem (DDOR, SAVA, TRIGLAV, WIENER STADTISHE, GENERALI, DUNAV, GLOBOS).</p>
+                            <p class="lead fw-normal text-white-50 mb-0">Kompletna zdravstvena usluga na jednom mestu, u
+                                saradnji i sa Vašim zdravstvenim osiguranjem (DDOR, SAVA, TRIGLAV, WIENER STADTISHE,
+                                GENERALI, DUNAV, GLOBOS).</p>
                         </div>
                     </div>
                 </div>
@@ -21,7 +23,9 @@
         <div class="container px-5 my-5">
             <div class="row gx-5">
                 <div class="col-xl-8">
-				<p class="mb-5 fs-5">Poliklinika Vinča by Profesional Medic i laboratorija za medicinsku biohemiju Profesional Lab svim penzionerima i osobama sa invaliditetom odobravaju stalni popust od 5% na sve usluge.</p>
+                    <p class="mb-5 fs-5">Poliklinika Vinča by Profesional Medic i laboratorija za medicinsku biohemiju
+                        Profesional Lab svim penzionerima i osobama sa invaliditetom odobravaju stalni popust od 5% na sve
+                        usluge.</p>
                     <!-- Service Prices -->
                     @foreach ($services as $service)
                         <div class="accordion mb-2" id="accordionExample">
@@ -52,7 +56,8 @@
                                                         @if ($discountedPrice)
                                                             (<span style="text-decoration: line-through" class="me-1">
                                                                 {{ $item->price }} RSD</span>
-                                                            <span style="font-weight: bold">{{ $discountedPrice }} RSD</span>)
+                                                            <span style="font-weight: bold">{{ $discountedPrice }}
+                                                                RSD</span>)
                                                         @else
                                                             <span style="font-weight: bold">{{ $item->price }} RSD</span>
                                                         @endif
@@ -94,7 +99,7 @@
                                         <div class="position-relative">
                                             <div class="bg-white shadow-sm overflow-hidden rounded-3">
                                                 @if ($service->image)
-                                                    <img class="card-img-top"
+                                                    <img class="card-img-top" loading="lazy"
                                                         src="{{ $storageUrl }}{{ $service->image->path }}"
                                                         alt="{{ $service->name }}">
                                                 @endif
@@ -215,8 +220,8 @@
                     <div class="col-lg-4 mb-5">
                         <div class="card h-100 shadow-sm rounded-3 border-0">
                             @if ($lPost->image)
-                                <img class="card-img-top" src="{{ $storageUrl }}{{ $lPost->image->path }}"
-                                    alt="{{ $lPost->title }}">
+                                <img class="card-img-top" loading="lazy"
+                                    src="{{ $storageUrl }}{{ $lPost->image->path }}" alt="{{ $lPost->title }}">
                             @endif
                             <div class="card-body p-4">
                                 @foreach ($lPost->categories as $lpCategory)

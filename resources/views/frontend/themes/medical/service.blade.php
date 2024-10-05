@@ -36,8 +36,8 @@
                 <div class="col-12">
                     <a href="" data-lightbox="example-set" data-title="">
                         @if ($service->image)
-                            <img class="img-fluid rounded-3 mb-5" src="{{ $storageUrl }}{{ $service->image->path }}"
-                                alt="{{ $service->name }}">
+                            <img class="img-fluid rounded-3 mb-5" loading="lazy"
+                                src="{{ $storageUrl }}{{ $service->image->path }}" alt="{{ $service->name }}">
                         @endif
                     </a>
                 </div>
@@ -156,7 +156,7 @@
                                         <div class="position-relative">
                                             <div class="bg-white shadow-sm overflow-hidden rounded-3">
                                                 @if ($service->image)
-                                                    <img class="card-img-top"
+                                                    <img class="card-img-top" loading="lazy"
                                                         src="{{ $storageUrl }}{{ $service->image->path }}"
                                                         alt="{{ $service->name }}">
                                                 @endif
@@ -198,7 +198,7 @@
                         <div class="col mb-5 mb-5 mb-xl-0">
                             <div class="text-center">
                                 @if ($doctor->image)
-                                    <img class="img-fluid rounded-circle" style="height:150px;width:150px"
+                                    <img class="img-fluid rounded-circle" loading="lazy" style="height:150px;width:150px"
                                         src="{{ $storageUrl }}{{ $doctor->image->path }}" alt="{{ $doctor->name }}">
                                 @endif
                                 <h5 class="fw-bolder">{{ $doctor->name }}</h5>
@@ -292,8 +292,8 @@
                     <div class="col-lg-4 mb-5">
                         <div class="card h-100 shadow-sm rounded-3 border-0">
                             @if ($lPost->image)
-                                <img class="card-img-top" src="{{ $storageUrl }}{{ $lPost->image->path }}"
-                                    alt="{{ $lPost->title }}">
+                                <img class="card-img-top" loading="lazy"
+                                    src="{{ $storageUrl }}{{ $lPost->image->path }}" alt="{{ $lPost->title }}">
                             @endif
                             <div class="card-body p-4">
                                 @foreach ($lPost->categories as $lpCategory)

@@ -30,8 +30,8 @@
                             <!-- Preview image figure-->
                             <figure class="mb-4">
                                 @if ($post->image)
-                                    <img class="img-fluid rounded w-100" src="{{ $storageUrl }}{{ $post->image->path }}"
-                                        alt="{{ $post->title }}">
+                                    <img class="img-fluid rounded w-100" loading="lazy"
+                                        src="{{ $storageUrl }}{{ $post->image->path }}" alt="{{ $post->title }}">
                                 @endif
                             </figure>
                             <!-- Post content-->
@@ -141,7 +141,7 @@
                         <div class="card h-100 shadow-sm rounded-3 border-0">
                             @if ($lPost->image)
                                 <img class="card-img-top" src="{{ $storageUrl }}{{ $lPost->image->path }}"
-                                    alt="{{ $lPost->title }}">
+                                    alt="{{ $lPost->title }}" loading="lazy">
                             @endif
                             <div class="card-body p-4">
                                 @foreach ($lPost->categories as $lpCategory)

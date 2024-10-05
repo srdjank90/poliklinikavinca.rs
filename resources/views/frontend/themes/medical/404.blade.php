@@ -7,7 +7,7 @@
             <!-- Login -->
             <div>
                 <div class="text-center col-lg-5 mx-auto">
-                    <img src="/themes/medical/assets/img/404.svg" class="img-fluid" alt="yoursitename">
+                    <img src="/themes/medical/assets/img/404.svg" loading="lazy" class="img-fluid" alt="yoursitename">
                     <h1 class="text-white fw-bold">Ooops, Strana nije pronadjena</h1>
                     <p class="fs-6 mb-5 text-white-50">Izgleda da stranica koju tražite ne postoji ili je uklonjena. Molimo
                         vas da proverite URL ili se vratite na početnu stranu.<br>
