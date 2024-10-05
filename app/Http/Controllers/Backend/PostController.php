@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\Frontend\GenerateController;
 use App\Models\File;
 use App\Models\Post;
 use App\Models\PostCategory;
@@ -77,6 +78,8 @@ class PostController extends BackendController
             $post->image_id = $uploadedImage;
         }
 
+        $gc = new GenerateController();
+        $gc->sitemap();
 
         $post->save();
         $id = $post->id;
@@ -148,6 +151,9 @@ class PostController extends BackendController
 
         $post->save();
 
+        $gc = new GenerateController();
+        $gc->sitemap();
+
         return redirect()->route('backend.posts.edit', [$id])
             ->with('success', 'Updated successfully');
     }
@@ -159,6 +165,8 @@ class PostController extends BackendController
     {
         $post = Post::find($id);
         $post->delete();
+        $gc = new GenerateController();
+        $gc->sitemap();
         return response()->json(['type' => 'success', 'message' => 'Deleted!'], 200);
     }
 

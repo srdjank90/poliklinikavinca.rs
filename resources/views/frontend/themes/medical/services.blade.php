@@ -2,6 +2,9 @@
 @section('title', 'Sve naše usluge na jednom mestu | Poliklinika Vinča')
 @section('description', '')
 @section('keywords', '')
+@section('ogTitle', 'Sve naše usluge na jednom mestu | Poliklinika Vinča')
+@section('ogDescription', 'Sve naše usluge')
+@section('ogUrl', route('frontend.services'))
 @section('content')
     <div class="bg-primary">
         <!-- Header-->

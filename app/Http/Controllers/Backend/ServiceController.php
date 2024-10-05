@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\Frontend\GenerateController;
 use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -79,6 +80,10 @@ class ServiceController extends Controller
 
         $service->save();
         $id = $service->id;
+
+        $gc = new GenerateController();
+        $gc->sitemap();
+
         return response()->json(['success' => true, 'error' => null, 'id' => $id, 'url' => route('backend.services.edit', $id)]);
     }
 
@@ -139,6 +144,9 @@ class ServiceController extends Controller
 
         $service->save();
 
+        $gc = new GenerateController();
+        $gc->sitemap();
+
         return redirect()->route('backend.services.edit', [$id])
             ->with('success', 'Updated successfully');
     }
@@ -150,6 +158,8 @@ class ServiceController extends Controller
     {
         $service = Service::find($id);
         $service->delete();
+        $gc = new GenerateController();
+        $gc->sitemap();
         return response()->json(['type' => 'success', 'message' => 'Deleted!'], 200);
     }
 
