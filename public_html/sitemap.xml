@@ -2,391 +2,205 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
     <url>
         <loc>http://127.0.0.1:8000</loc>
-        <lastmod>2024-09-09T11:05:32+00:00</lastmod>
+        <lastmod>2024-09-29T08:41:02+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
             </url>
     <url>
         <loc>http://127.0.0.1:8000/o-nama</loc>
-        <lastmod>2024-09-09T11:05:32+00:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-            </url>
-    <url>
-        <loc>http://127.0.0.1:8000/korpa</loc>
-        <lastmod>2024-09-09T11:05:32+00:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-            </url>
-    <url>
-        <loc>http://127.0.0.1:8000/zavrsi-kupovinu</loc>
-        <lastmod>2024-09-09T11:05:32+00:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-            </url>
-    <url>
-        <loc>http://127.0.0.1:8000/zavrsi-kupovunu/uspesno</loc>
-        <lastmod>2024-09-09T11:05:32+00:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-            </url>
-    <url>
-        <loc>http://127.0.0.1:8000/proizvodi</loc>
-        <lastmod>2024-09-09T11:05:32+00:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-            </url>
-    <url>
-        <loc>http://127.0.0.1:8000/investicioni-kalkulator</loc>
-        <lastmod>2024-09-09T11:05:32+00:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-            </url>
-    <url>
-        <loc>http://127.0.0.1:8000/paketi-porudzbina</loc>
-        <lastmod>2024-09-09T11:05:32+00:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-            </url>
-    <url>
-        <loc>http://127.0.0.1:8000/najcesca-pitanja</loc>
-        <lastmod>2024-09-09T11:05:32+00:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-            </url>
-    <url>
-        <loc>http://127.0.0.1:8000/veleprodaja-zlata</loc>
-        <lastmod>2024-09-09T11:05:32+00:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-            </url>
-    <url>
-        <loc>http://127.0.0.1:8000/cena-zlata</loc>
-        <lastmod>2024-09-09T11:05:32+00:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-            </url>
-    <url>
-        <loc>http://127.0.0.1:8000/investiciono-zlato</loc>
-        <lastmod>2024-09-09T11:05:32+00:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-            </url>
-    <url>
-        <loc>http://127.0.0.1:8000/investiciono-srebro</loc>
-        <lastmod>2024-09-09T11:05:32+00:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-            </url>
-    <url>
-        <loc>http://127.0.0.1:8000/royal-mint</loc>
-        <lastmod>2024-09-09T11:05:32+00:00</lastmod>
+        <lastmod>2024-09-29T08:41:02+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
         <loc>http://127.0.0.1:8000/blog</loc>
-        <lastmod>2024-09-09T11:05:32+00:00</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
+        <lastmod>2024-09-29T08:41:02+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+            </url>
+    <url>
+        <loc>http://127.0.0.1:8000/najcesca-pitanja</loc>
+        <lastmod>2024-09-29T08:41:02+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+            </url>
+    <url>
+        <loc>http://127.0.0.1:8000/cenovnik</loc>
+        <lastmod>2024-09-29T08:41:02+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+            </url>
+    <url>
+        <loc>http://127.0.0.1:8000/zakazi-pregled</loc>
+        <lastmod>2024-09-29T08:41:02+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+            </url>
+    <url>
+        <loc>http://127.0.0.1:8000/usluge</loc>
+        <lastmod>2024-09-29T08:41:02+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+            </url>
+    <url>
+        <loc>http://127.0.0.1:8000/doktori</loc>
+        <lastmod>2024-09-29T08:41:02+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
             </url>
     <url>
         <loc>http://127.0.0.1:8000/kontakt</loc>
-        <lastmod>2024-09-09T11:05:32+00:00</lastmod>
+        <lastmod>2024-09-29T08:41:02+00:00</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.6</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/proizvodi/argor-heraeus-1g-zlatna-plocica</loc>
-        <lastmod>2024-05-02T10:26:43+00:00</lastmod>
+        <loc>http://127.0.0.1:8000/usluga/ginekologija</loc>
+        <lastmod>2024-09-30T14:05:18+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/proizvodi/c-hafner-1g-zlatna-plocica</loc>
-        <lastmod>2024-05-02T10:26:07+00:00</lastmod>
+        <loc>http://127.0.0.1:8000/usluga/radiologija</loc>
+        <lastmod>2024-09-30T14:05:43+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/proizvodi/the-royal-mint-britannia-1g-zlatna-plocica</loc>
-        <lastmod>2024-04-20T14:46:32+00:00</lastmod>
+        <loc>http://127.0.0.1:8000/usluga/neurologija</loc>
+        <lastmod>2024-09-30T14:06:00+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/proizvodi/argor-heraeus-2g-zlatna-plocica</loc>
-        <lastmod>2024-05-02T10:31:48+00:00</lastmod>
+        <loc>http://127.0.0.1:8000/usluga/kardiologija</loc>
+        <lastmod>2024-09-30T14:06:23+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/proizvodi/c-hafner-2g-zlatna-plocica</loc>
-        <lastmod>2024-05-02T10:27:02+00:00</lastmod>
+        <loc>http://127.0.0.1:8000/usluga/ultrazvuk</loc>
+        <lastmod>2024-09-30T14:08:37+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/proizvodi/argor-heraeus-5g-zlatna-plocica</loc>
-        <lastmod>2024-05-02T10:32:34+00:00</lastmod>
+        <loc>http://127.0.0.1:8000/usluga/estetska-medicina</loc>
+        <lastmod>2024-09-30T13:11:38+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/proizvodi/chafner-5g-zlatna-plocica</loc>
-        <lastmod>2024-05-02T10:32:46+00:00</lastmod>
+        <loc>http://127.0.0.1:8000/usluga/opsta-praksa</loc>
+        <lastmod>2024-09-30T13:14:24+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/proizvodi/the-royal-mint-britannia-5g-zlatna-plocica</loc>
-        <lastmod>2024-04-20T15:05:23+00:00</lastmod>
+        <loc>http://127.0.0.1:8000/usluga/pedijatrija</loc>
+        <lastmod>2024-09-30T13:21:29+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/proizvodi/argor-heraeus-10g-zlatna-plocica</loc>
-        <lastmod>2024-05-02T10:33:02+00:00</lastmod>
+        <loc>http://127.0.0.1:8000/usluga/urologija</loc>
+        <lastmod>2024-09-30T13:22:38+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/proizvodi/c-hafner-10g-zlatna-plocica</loc>
-        <lastmod>2024-05-02T10:33:15+00:00</lastmod>
+        <loc>http://127.0.0.1:8000/usluga/vaskularna-hirurgija</loc>
+        <lastmod>2024-09-30T13:24:33+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/proizvodi/the-royal-mint-britannia-10g-zlatna-plocica</loc>
-        <lastmod>2024-04-20T15:11:28+00:00</lastmod>
+        <loc>http://127.0.0.1:8000/usluga/ortopedija</loc>
+        <lastmod>2024-09-30T13:26:33+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/proizvodi/argor-heraeus-20g-zlatna-plocica</loc>
-        <lastmod>2024-05-02T10:34:27+00:00</lastmod>
+        <loc>http://127.0.0.1:8000/usluga/orl</loc>
+        <lastmod>2024-09-30T13:29:29+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/proizvodi/chafner-20g-zlatna-plocica</loc>
-        <lastmod>2024-05-02T10:34:41+00:00</lastmod>
+        <loc>http://127.0.0.1:8000/usluga/gastroenterologija</loc>
+        <lastmod>2024-09-30T13:32:59+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/proizvodi/the-royal-mint-britannia-20g-zlatna-plocica</loc>
-        <lastmod>2024-04-20T15:19:08+00:00</lastmod>
+        <loc>http://127.0.0.1:8000/usluga/endokrinologija</loc>
+        <lastmod>2024-09-30T13:34:23+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/proizvodi/argor-heraeus-1-oz-zlatna-poluga</loc>
-        <lastmod>2024-05-02T10:36:16+00:00</lastmod>
+        <loc>http://127.0.0.1:8000/usluga/psihijatrija</loc>
+        <lastmod>2024-09-30T13:36:30+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/proizvodi/chafner-1-oz-zlatna-poluga</loc>
-        <lastmod>2024-05-02T10:36:25+00:00</lastmod>
+        <loc>http://127.0.0.1:8000/usluga/psihologija</loc>
+        <lastmod>2024-09-30T13:37:46+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/proizvodi/the-royal-mint-britannia-1oz-zlatna-poluga</loc>
-        <lastmod>2024-04-21T10:22:20+00:00</lastmod>
+        <loc>http://127.0.0.1:8000/usluga/defektologija</loc>
+        <lastmod>2024-09-30T13:39:17+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/proizvodi/argor-heraeus-50g-zlatna-poluga</loc>
-        <lastmod>2024-05-02T10:36:50+00:00</lastmod>
+        <loc>http://127.0.0.1:8000/usluga/dermatologija</loc>
+        <lastmod>2024-09-30T13:40:55+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/proizvodi/chafner-50g-zlatna-poluga</loc>
-        <lastmod>2024-05-02T10:37:02+00:00</lastmod>
+        <loc>http://127.0.0.1:8000/usluga/pulmologija</loc>
+        <lastmod>2024-09-30T13:48:05+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/proizvodi/the-royal-mint-britannia-50g-zlatna-poluga</loc>
-        <lastmod>2024-04-21T10:09:29+00:00</lastmod>
+        <loc>http://127.0.0.1:8000/usluga/onkologija</loc>
+        <lastmod>2024-09-30T13:56:02+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/proizvodi/argor-heraeus-100g-zlatna-poluga</loc>
-        <lastmod>2024-05-02T10:38:08+00:00</lastmod>
+        <loc>http://127.0.0.1:8000/usluga/sanitetski-prevoz</loc>
+        <lastmod>2024-09-30T13:57:16+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/proizvodi/chafner-100g-zlatna-poluga</loc>
-        <lastmod>2024-05-02T10:38:41+00:00</lastmod>
+        <loc>http://127.0.0.1:8000/usluga/reumatologija</loc>
+        <lastmod>2024-09-30T13:57:55+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/proizvodi/the-royal-mint-britannia-100g-zlatna-poluga</loc>
-        <lastmod>2024-04-21T10:09:44+00:00</lastmod>
+        <loc>http://127.0.0.1:8000/usluga/laboratorija</loc>
+        <lastmod>2024-09-30T13:58:15+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/proizvodi/zlatna-poluga-250g-c-hafner</loc>
-        <lastmod>2024-05-02T10:39:12+00:00</lastmod>
+        <loc>http://127.0.0.1:8000/blog/things-most-people-dont-know-about-medical-clinic</loc>
+        <lastmod>2024-09-29T17:57:16+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/proizvodi/c-hafner-500g-zlatna-poluga</loc>
-        <lastmod>2024-05-02T10:39:35+00:00</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-            </url>
-    <url>
-        <loc>http://127.0.0.1:8000/proizvodi/chafner-zlatna-poluga-1kg</loc>
-        <lastmod>2024-05-02T10:39:56+00:00</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-            </url>
-    <url>
-        <loc>http://127.0.0.1:8000/proizvodi/mali-dukat-franc-jozef-jednostruki</loc>
-        <lastmod>2024-05-02T10:40:32+00:00</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-            </url>
-    <url>
-        <loc>http://127.0.0.1:8000/proizvodi/veliki-dukat-franc-jozef-cetvorostruki</loc>
-        <lastmod>2024-05-02T10:40:58+00:00</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-            </url>
-    <url>
-        <loc>http://127.0.0.1:8000/proizvodi/wiener-philharmoniker-1oz-zlatni-dukat</loc>
-        <lastmod>2024-05-02T10:41:31+00:00</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-            </url>
-    <url>
-        <loc>http://127.0.0.1:8000/proizvodi/chafner-zlatne-plocice-10g-10x1g</loc>
-        <lastmod>2024-05-02T10:42:23+00:00</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-            </url>
-    <url>
-        <loc>http://127.0.0.1:8000/proizvodi/chafner-zlatne-plocice-20g-10x2g</loc>
-        <lastmod>2024-05-02T10:43:07+00:00</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-            </url>
-    <url>
-        <loc>http://127.0.0.1:8000/proizvodi/zlatna-plocica-za-krstenje-zlatni-standard</loc>
-        <lastmod>2024-04-24T09:52:28+00:00</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-            </url>
-    <url>
-        <loc>http://127.0.0.1:8000/proizvodi/zlatna-plocica-za-poklon-zlatni-standard</loc>
-        <lastmod>2024-04-24T09:51:57+00:00</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-            </url>
-    <url>
-        <loc>http://127.0.0.1:8000/proizvodi/zlatna-plocica-za-rodenje-zlatni-standard</loc>
-        <lastmod>2024-04-24T09:57:01+00:00</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-            </url>
-    <url>
-        <loc>http://127.0.0.1:8000/proizvodi/srebrne-poluge-100g-10x10g</loc>
-        <lastmod>2024-04-21T10:10:26+00:00</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-            </url>
-    <url>
-        <loc>http://127.0.0.1:8000/proizvodi/srebrna-poluga-10-oz</loc>
-        <lastmod>2024-04-20T16:36:29+00:00</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-            </url>
-    <url>
-        <loc>http://127.0.0.1:8000/proizvodi/srebrna-poluga-5-kg</loc>
-        <lastmod>2024-04-20T16:38:20+00:00</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-            </url>
-    <url>
-        <loc>http://127.0.0.1:8000/blog/zlatni-dukat-franc-jozef-i-njihova-investiciona-vrednost</loc>
-        <lastmod>2024-04-19T12:43:00+00:00</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-            </url>
-    <url>
-        <loc>http://127.0.0.1:8000/blog/zlatni-standard-kao-kljuc-uspeha</loc>
-        <lastmod>2024-04-20T22:15:29+00:00</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-            </url>
-    <url>
-        <loc>http://127.0.0.1:8000/blog/investicija-u-zlato-ostaje-zauvek-novac</loc>
-        <lastmod>2024-04-19T14:05:29+00:00</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-            </url>
-    <url>
-        <loc>http://127.0.0.1:8000/blog/zlatni-dukat-becke-filharmonije-investicija-za-buducnost</loc>
-        <lastmod>2024-04-20T11:34:15+00:00</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-            </url>
-    <url>
-        <loc>http://127.0.0.1:8000/blog/zlato-kao-alternativa-saveti-za-zaradu</loc>
-        <lastmod>2024-04-20T11:34:44+00:00</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-            </url>
-    <url>
-        <loc>http://127.0.0.1:8000/blog/investiciono-zlato-prevare-u-srbiji-vodic-za-sigurno-ulaganje</loc>
-        <lastmod>2024-04-20T11:33:55+00:00</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-            </url>
-    <url>
-        <loc>http://127.0.0.1:8000/blog/585-zlato-pregled-cene-po-gramu-i-vrednosti</loc>
-        <lastmod>2024-04-19T17:11:53+00:00</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-            </url>
-    <url>
-        <loc>http://127.0.0.1:8000/blog/investiciono-zlato-poredenje-bruto-marzi-trgovaca-u-srbiji</loc>
-        <lastmod>2024-04-20T11:31:28+00:00</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-            </url>
-    <url>
-        <loc>http://127.0.0.1:8000/blog/analiza-trzista-zlata-koliko-kosta-gram-zlata</loc>
-        <lastmod>2024-04-20T11:31:03+00:00</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-            </url>
-    <url>
-        <loc>http://127.0.0.1:8000/blog/investiciono-zlato-kao-sigurno-utociste-za-ulaganje</loc>
-        <lastmod>2024-04-20T11:34:35+00:00</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-            </url>
-    <url>
-        <loc>http://127.0.0.1:8000/opsti-uslovi-kupovine</loc>
-        <lastmod>2024-04-16T20:26:45+00:00</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-            </url>
-    <url>
-        <loc>http://127.0.0.1:8000/uslovi-koriscenja-i-politika-privatnosti</loc>
-        <lastmod>2024-04-23T17:43:11+00:00</lastmod>
+        <loc>http://127.0.0.1:8000/testiranje</loc>
+        <lastmod>2024-09-17T21:14:45+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
             </url>

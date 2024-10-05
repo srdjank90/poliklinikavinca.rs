@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Service;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -94,7 +95,33 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/backend/settings/theme', [App\Http\Controllers\Backend\SettingsController::class, 'theme'])->name('backend.settings.theme');
 });
 
+
 Route::redirect('/ultrazvucna-dijagnostika', '/usluga/ultrazvuk', 301);
+Route::redirect('/ginekologija', '/usluga/ginekologija', 301);
+Route::redirect('/neurologija', '/usluga/neurologija', 301);
+Route::redirect('/kardiologija', '/usluga/kardiologija', 301);
+Route::redirect('/estetska-medicina', '/usluga/estetska-medicina', 301);
+Route::redirect('/opsta-medicina', '/usluga/opsta-praksa', 301);
+Route::redirect('/pedijatrija', '/usluga/pedijatrija', 301);
+Route::redirect('/urologija', '/usluga/urologija', 301);
+Route::redirect('/vaskularna-hirurgija', '/usluga/vaskularna-hirurgija', 301);
+Route::redirect('/ortopedija', '/usluga/ortopedija', 301);
+Route::redirect('/orl', '/usluga/orl', 301);
+Route::redirect('/gastroenterologija', '/usluga/gastroenterologija', 301);
+Route::redirect('/endokrinologija', '/usluga/endokrinologija', 301);
+Route::redirect('/psihijatrija', '/usluga/psihijatrija', 301);
+Route::redirect('/psihologija', '/usluga/psihologija', 301);
+Route::redirect('/defektologija', '/usluga/defektologija', 301);
+Route::redirect('/dermatologija', '/usluga/dermatologija', 301);
+Route::redirect('/pulmologija', '/usluga/pulmologija', 301);
+Route::redirect('/onkologija', '/usluga/onkologija', 301);
+Route::redirect('/sanitetski-prevoz', '/usluga/sanitetski-prevoz', 301);
+Route::redirect('/reumatologija', '/usluga/reumatologija', 301);
+Route::redirect('/laboratorija', '/usluga/laboratorija', 301);
+
+Route::redirect('/nast-tim', '/doktori', 301);
+Route::redirect('/galerija', '/o-nama', 301);
+
 
 // Frontend
 Route::get('/', [App\Http\Controllers\Frontend\FrontendController::class, 'index'])->name('frontend.index');

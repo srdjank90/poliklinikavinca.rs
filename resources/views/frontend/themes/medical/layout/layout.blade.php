@@ -8,7 +8,7 @@
     <title>@yield('title', 'Poliklinika Vinča')</title>
     <meta name="description" content="@yield('description', '')" />
     <meta name="keywords" content="@yield('keywords', '')" />
-    <meta name="author" content="SK" />
+    <meta name="author" content="Allinclusive" />
 
     <!-- OG Tags -->
     <meta property="og:title" content="@yield('ogTitle', 'Poliklinika Vinča')" />

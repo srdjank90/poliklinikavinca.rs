@@ -1,9 +1,9 @@
 @extends('frontend.themes.medical.layout.layout')
-@section('title', $service->seo->title)
-@section('description', $service->seo->description)
-@section('keywords', $service->seo->keywords)
-@section('ogTitle', $service->seo->title)
-@section('ogDescription', $service->seo->description)
+@section('title', isset($service->seo->title) ? $service->seo->title : 'Poliklinika Vinča')
+@section('description', isset($service->seo->description) ? $service->seo->description : '')
+@section('keywords', isset($service->seo->keywords) ? $service->seo->keywords : 'Poliklinika Vinča')
+@section('ogTitle', isset($service->seo->title) ? $service->seo->title : 'Poliklinika Vinča')
+@section('ogDescription', isset($service->seo->description) ? $service->seo->description : '')
 @section('ogImage', $service->image ? $storageUrl . $service->image->path : '')
 @section('ogUrl', route('frontend.service', $service->slug))
 @section('content')
@@ -100,11 +100,11 @@
                                         @if ($item->price && $item->price != '')
                                             <div>
                                                 @if ($discountedPrice)
-                                                (<span style="text-decoration: line-through" class="me-1">
-                                                    {{ $item->price }} RSD</span>
-                                                <span style="font-weight: bold">{{ $discountedPrice }} RSD</span>)
+                                                    (<span style="text-decoration: line-through" class="me-1">
+                                                        {{ $item->price }} RSD</span>
+                                                    <span style="font-weight: bold">{{ $discountedPrice }} RSD</span>)
                                                 @else
-                                                <span style="font-weight: bold">({{ $item->price }} RSD)</span>
+                                                    <span style="font-weight: bold">({{ $item->price }} RSD)</span>
                                                 @endif
                                                 <a class="btn btn-primary p-0 px-1 d-md-none"
                                                     style="position: absolute;right: 10px;"
