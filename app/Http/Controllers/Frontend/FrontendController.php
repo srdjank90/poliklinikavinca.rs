@@ -10,6 +10,7 @@ use App\Models\Page;
 use App\Models\Post;
 use App\Models\PostCategory;
 use App\Models\Service;
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Log;
 use Spatie\SchemaOrg\Schema;
 
@@ -67,7 +68,7 @@ class FrontendController extends Controller
         $post = Post::where('slug', $slug)->first();
         $blogPostSchema = Schema::blogPosting()
             ->headline($post->title)
-            ->articleBody($post->content)
+            ->articleBody(Str::limit(strip_tags($post->content), 200))
             //->author($post->author->name)
             ->datePublished($post->created_at->toIso8601String())
             ->url(url()->current());

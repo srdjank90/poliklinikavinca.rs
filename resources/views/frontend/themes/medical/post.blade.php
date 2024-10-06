@@ -45,9 +45,8 @@
                             </section>
                         </div>
                         <!-- Add the schema markup -->
-                        <script type="application/ld+json">
-                            {!! $blogPostSchema->toScript() !!}
-                        </script>
+                        {!! $blogPostSchema->toScript() !!}
+
                     </div>
                 </div>
             </div>
