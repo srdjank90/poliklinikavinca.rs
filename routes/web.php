@@ -115,6 +115,7 @@ Route::redirect('/defektologija', '/usluga/defektologija', 301);
 Route::redirect('/dermatologija', '/usluga/dermatologija', 301);
 Route::redirect('/pulmologija', '/usluga/pulmologija', 301);
 Route::redirect('/onkologija', '/usluga/onkologija', 301);
+Route::redirect('/radiologija', '/usluga/radiologija', 301);
 Route::redirect('/sanitetski-prevoz', '/usluga/sanitetski-prevoz', 301);
 Route::redirect('/reumatologija', '/usluga/reumatologija', 301);
 Route::redirect('/laboratorija', '/usluga/laboratorija', 301);
